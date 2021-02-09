@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    background: url(http://www.baltana.com/files/wallpapers-16/Digital-Art-Background-HD-Wallpapers-41706.jpg);
+    grid-column: 1 / -1 ;
+    grid-row: 1 /-1 ;
+    align-content: stretch;
+}
+h1{
+    color:aqua;
+}

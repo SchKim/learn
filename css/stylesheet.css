@@ -12,6 +12,7 @@ body {
     left:0; 
     background: url("http://www.baltana.com/files/wallpapers-16/Digital-Art-Background-HD-Wallpapers-41706.jpg") center / cover  no-repeat;        
   }
+
 .menu{
     position: absolute;
     bottom: 0;
@@ -19,29 +20,37 @@ body {
     right: 0;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   /* grid-template-rows: repeat(11, minmax(120px, 1fr)); */
-  height: 1400px;
-  /* border: 5px solid yellow; */
+  border-bottom: 5px solid yellow;
   place-items:  end ;
   
 }
 li{
-    list-style: none;    
+    list-style: none;  
+    margin: 0 0 3% 0;  
 }
-li a{
+li > a{
     text-decoration: none;
     color:#fbefd7;
+    font-size: 24px
 }
-li a i{
-    font-size: 50px;
+
+li a > i{
+    font-size: 45px;
     color:#fbefd7;
     width: 100%;
-
 }
-.menuItem5{
+
+i:hover{
+    background: #b35d5d54 ;
+    padding: 5px 50px;
+    text-align: center;   
+}
+/* als ik meer tijd had gehad had ik de div. hide ook willen meenemen */
+li:last-child{
     grid-column-end: -1;
-    margin: 0 20px 0 0;
+    margin: 0 30% 3% 0;
 }
 .hide {
     display: none;
@@ -50,4 +59,17 @@ li a i{
 
 .tooltip:hover + .hide {
     display: block;
+}
+li:first-child {
+    background: rgba(149, 155, 138, 0.2) fixed center;
+    color: white;
+    padding: 5px 120px;
+  }
+i ~ div::first-letter {
+    color:  #f97970;
+    font-size: 30px;
+  }
+/* note eigenlijk doet de a tag dit al bij default  */
+.progress {
+    cursor: progress;
 }

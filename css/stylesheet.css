@@ -85,6 +85,15 @@ i ~ div::first-letter {
 
 /* styling voor karakter_img */
 
+.karakter_container{
+    position: absolute;
+    top:40px;
+    left: 40px;
+    display: grid;
+    grid-template-columns: repeat (auto-fit, minmax(300px, 1fr));
+
+}
+
 .karakter_img{
  width: 200px;
 }

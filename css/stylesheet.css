@@ -93,6 +93,12 @@ i ~ div::first-letter {
     grid-template-columns: repeat (auto-fit, minmax(300px, 1fr));
 
 }
+.karakter_info{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap:20px;
+
+}
 
 .karakter_img{
  width: 200px;

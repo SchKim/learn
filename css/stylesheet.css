@@ -19,21 +19,42 @@ body {
     left: 0;
     right: 0;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  grid-template-columns: repeat( 5, 1fr);
   /* grid-template-rows: repeat(11, minmax(120px, 1fr)); */
-  border-bottom: 5px solid yellow;
-  place-items:  end ;
+  background:  #f97970;
+  padding: 15px 0 15px 25px;
+  
+  
+  
   
 }
 li{
-    list-style: none;  
-    margin: 0 0 3% 0;  
+    list-style: none;   
+    width: 25%;
+    text-align: center;
+}
+
+ul li:hover{
+    border-bottom: 5px solid #02132c;
+
+}
+li:first-child {
+    border-bottom: 5px solid #02132c;
+    color: white;
+    width: 50%;
+    align-items: center;
+  }
+
+li:last-child{
+    grid-column-end: -1;
+    justify-self: end;
+    margin: 0 30% 3% 0;
 }
 li > a{
     text-decoration: none;
-    color:#fbefd7;
-    font-size: 24px
+    font: #02132c 24px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
 }
 
 li a > i{
@@ -41,35 +62,28 @@ li a > i{
     color:#fbefd7;
     width: 100%;
 }
-
-i:hover{
-    background: #b35d5d54 ;
-    padding: 5px 50px;
-    text-align: center;   
-}
-/* als ik meer tijd had gehad had ik de div. hide ook willen meenemen */
-li:last-child{
-    grid-column-end: -1;
-    margin: 0 30% 3% 0;
-}
-.hide {
-    display: none;
-    font: oblique small-caps bold 50x/50px Georgia, serif; 
-}
-
-.tooltip:hover + .hide {
-    display: block;
-}
-li:first-child {
-    background: rgba(149, 155, 138, 0.2) fixed center;
-    color: white;
-    padding: 5px 120px;
-  }
 i ~ div::first-letter {
     color:  #f97970;
     font-size: 30px;
   }
+.hide {
+    position: absolute;
+    top: -125px;
+    left: -30px;
+    display: none;
+    padding: 10px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font: oblique small-caps bold 17px/17px Georgia, serif; 
+    background: #fbefd7;
+}
+.tooltip:hover + .hide {
+    display: block;
+}
+
+
 /* note eigenlijk doet de a tag dit al bij default  */
 .progress {
     cursor: progress;
 }
+

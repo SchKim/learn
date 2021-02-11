@@ -69,7 +69,7 @@ i ~ div::first-letter {
     display: none;
     padding: 10px;
     border-radius: 50px;
-    text-transform: uppercase;
+    
     font: oblique small-caps bold 17px/17px Georgia, serif; 
     background: #fbefd7;
 }
@@ -93,13 +93,26 @@ i ~ div::first-letter {
     grid-template-columns: repeat (auto-fit, minmax(300px, 1fr));
 
 }
+.karakter_img{
+    width: 300px;
+   }
 .karakter_info{
     display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-gap:20px;
-
+    grid-template-columns: 250px 1fr;
+    /* grid-gap:20px; */
+    align-items: center;
 }
-
-.karakter_img{
- width: 200px;
+.karakter_details{
+    position: absolute;
+    top:40px;
+    left: 340px; 
+    color: #fbefd7;
 }
+div.karakter_details > p{
+    text-transform: uppercase;
+    font: 26px/ 35px bold; 
+}
+div.karakter_details > p::first-letter {
+    color:  #f97970;
+    font-size: 35px;
+  }

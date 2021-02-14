@@ -88,7 +88,9 @@ i ~ div::first-letter {
 
 /* styling voor karakter_img */
 
+
 .karakter_container{
+    /* visibility: hidden; */
     position: absolute;
     top:40px;
     left: 40px;
@@ -141,38 +143,29 @@ width: 100%;
     
   }
 .karakter_table td {
-    vertical-align:middle;
-    height:34px;
     border-bottom:solid 1px #f1f1f1;
-    
   }
 
  .background_position_td{
     position:relative;
+     background: #f97970; 
+     height: 24px;
+     border-radius: 50px 0 0 50px;
 
  }
-  /* .progress {
-    width: 200%;
-   
-  } */
-  
 
-     div .indeterminate:before {
+div .indeterminate:before {
         content: '';
         position: absolute;
+        left: 0;
+        top: 0;
+        /* width: 100%; */
         background: #f97970; 
-        height: 10px;
+        height: 24px;
+        border-radius: 50px;
         will-change: left, right;
         animation: indeterminate 3.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; 
-      }
-
-      .indeterminate {
-        background: red;
-        width: 100%;
-       }
-  
-
-  
+     }
 
 @-webkit-keyframes indeterminate {
 0% {

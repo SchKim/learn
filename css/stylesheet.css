@@ -71,7 +71,7 @@ i ~ div::first-letter {
   display: none;
   padding: 10px;
   border-radius: 50px;
-  font:  oblique small-caps bold 17px/17px Georgia, serif;
+  font: oblique small-caps bold 17px/17px Georgia, serif;
   background: #fff;
 }
 
@@ -87,7 +87,7 @@ i ~ div::first-letter {
 /* styling voor karakter_img */
 
 #karakter_container {
-    visibility: hidden;
+  visibility: hidden;
 }
 .karakter_container {
   position: absolute;

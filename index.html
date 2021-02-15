@@ -14,132 +14,130 @@
     <!-- ***deze hier sluiten en de andere containeres erop niet erin + betere claaname niet met div   -->
     <div class="background_page"></div>
     <div class="container_page">
-        <p>test</p>
-    
-    <div id="karakter_container" class="karakter_container">
-      <!--  id eruit js aanpassen  -->
-      <div class="karakter_info">
-        <!--*** div om img  -->
-        <div class="img_container">
-          <img
-            class="karakter_img"
-            src="./assets/pic_nicolet.jpeg"
-            alt="foto_kim"
-          />
+      <div id="karakter_container" class="karakter_container">
+        <!--  id eruit js aanpassen  -->
+        <div class="karakter_info">
+          <!--*** div om img  -->
+          <div class="img_container">
+            <img
+              class="karakter_img"
+              src="./assets/pic_nicolet.jpeg"
+              alt="foto_kim"
+            />
+          </div>
+          <!-- gebruik BEM, alle p claases weg + p vervangen door span   -->
+          <div class="karakter_details">
+            <p class="name">Kim Schenk</p>
+            <p class="function">Frontend Developer</p>
+            <p class="organisation">FIOD</p>
+          </div>
         </div>
-        <!-- gebruik BEM, alle p claases weg + p vervangen door span   -->
-        <div class="karakter_details">
-          <p class="name">Kim Schenk</p>
-          <p class="function">Frontend Developer</p>
-          <p class="organisation">FIOD</p>
-        </div>
-      </div>
-      <div class="karakter_skills">
-        <h1>skills</h1>
-        <div class="karakter_table">
-          <table>
-            <tr>
-              <th>language</th>
-              <!-- <th></th> deze moet weg eerste cell groter, ook de overige ongebruikte cells weg 
+        <div class="karakter_skills">
+          <h1>skills</h1>
+          <div class="karakter_table">
+            <table>
+              <tr>
+                <th>language</th>
+                <!-- <th></th> deze moet weg eerste cell groter, ook de overige ongebruikte cells weg 
                   -->
-              <th>0%</th>
-              <th>50%</th>
-              <th>100%</th>
-              <th>150%</th>
-              <th>200%</th>
-            </tr>
-            <tr>
-              <td>kim</td>
-              <td></td>
-              <td class="background_position_td">
-                <div class="indeterminate"></div>
-              </td>
-              <td class="background_position_td">
-                <div class="indeterminate"></div>
-              </td>
-              <td class="background_position_td">
-                <div class="indeterminate"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>html</td>
-              <td></td>
-              <td class="background_position_td">
-                <div class="indeterminate"></div>
-              </td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>css</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>javascript</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>typeschript</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
+                <th>0%</th>
+                <th>50%</th>
+                <th>100%</th>
+                <th>150%</th>
+                <th>200%</th>
+              </tr>
+              <tr>
+                <td>kim</td>
+                <td></td>
+                <td class="background_position_td">
+                  <div class="indeterminate"></div>
+                </td>
+                <td class="background_position_td">
+                  <div class="indeterminate"></div>
+                </td>
+                <td class="background_position_td">
+                  <div class="indeterminate"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>html</td>
+                <td></td>
+                <td class="background_position_td">
+                  <div class="indeterminate"></div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>css</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>javascript</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>typeschript</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-</div>
-<div class="contianer_menu">
-    <nav>
-      <ul class="menu progress">
-        <li class="menuItem">
-          <a href="#" onclick="showKarakter()">
-            <i class="fas fa-female tooltip"></i>
-            <div class="hide">Karakter</div>
-            <!-- verwiujder div en plaats content ook in css met de :hover + href eruit  -->
-          </a>
-        </li>
-        <li class="menuItem">
-          <a href="#">
-            <i class="fas fa-user-graduate tooltip"></i>
-            <div class="hide">Knowledge Book</div>
-          </a>
-        </li>
-        <li class="menuItem">
-          <a href="#">
-            <i class="fas fa-trophy tooltip"></i>
-            <div class="hide">Achievements</div>
-          </a>
-        </li>
-        <li class="menuItem">
-          <a href="#">
-            <i class="fas fa-question tooltip"></i>
-            <div class="hide">Quests</div>
-          </a>
-        </li>
-        <li class="menuItem">
-          <a href="#">
-            <i class="fas fa-history tooltip"></i>
-            <div class="hide">History</div>
-          </a>
-        </li>
-      </ul>
-    </nav>
-</div>
+    <div class="contianer_menu">
+      <nav>
+        <ul class="menu progress">
+          <li class="menuItem">
+            <a href="#" onclick="showKarakter()">
+              <i class="fas fa-female tooltip"></i>
+              <div class="hide">Karakter</div>
+              <!-- verwiujder div en plaats content ook in css met de :hover + href eruit  -->
+            </a>
+          </li>
+          <li class="menuItem">
+            <a href="#">
+              <i class="fas fa-user-graduate tooltip"></i>
+              <div class="hide">Knowledge Book</div>
+            </a>
+          </li>
+          <li class="menuItem">
+            <a href="#">
+              <i class="fas fa-trophy tooltip"></i>
+              <div class="hide">Achievements</div>
+            </a>
+          </li>
+          <li class="menuItem">
+            <a href="#">
+              <i class="fas fa-question tooltip"></i>
+              <div class="hide">Quests</div>
+            </a>
+          </li>
+          <li class="menuItem">
+            <a href="#">
+              <i class="fas fa-history tooltip"></i>
+              <div class="hide">History</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>

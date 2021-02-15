@@ -15,6 +15,11 @@ body {
     center / cover no-repeat;
   z-index: -1;
 }
+.container_page{
+    height: calc(auto - 60px);
+    width: 80%;
+    margin: 0 10%;
+}
 .contianer_menu {
   height: 50px;
   position: absolute;
@@ -22,18 +27,23 @@ body {
   left: 0;
   right: 0;
 }
+
+
+/* Outside settings */
+
+
+
 /* menu iconen alleemaal in het center  */
 .menu {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   /* grid-template-rows: repeat(11, minmax(120px, 1fr)); */
   background: #f97970;
-  /* padding: 15px 0 15px 25px; */
+  padding: 15px 0;
+  place-items: center center;
 }
 li {
-  list-style: none;
-  /* width: 25%; weg = text align center   */
-  text-align: center;
+  list-style: none; 
 }
 
 ul li:hover {
@@ -42,14 +52,12 @@ ul li:hover {
 li:first-child {
   border-bottom: 5px solid #02132c;
   color: white;
-  /* width: 50%; weg */
-  align-items: center;
 }
 /* onderzoek doen grid aatste element  */
 li:last-child {
   grid-column-end: -1;
-  justify-self: end;
-  /* margin: 0 30% 3% 0; weg  */
+ 
+
 }
 li > a {
   text-decoration: none;
@@ -154,7 +162,7 @@ div.karakter_details > p::first-letter {
   position: relative;
   top: 0;
   background: #f97970;
-  height: 24px;
+  /* height: 24px; */
   padding: 0;
 }
 div .indeterminate:before {
@@ -164,7 +172,7 @@ div .indeterminate:before {
   /* left: 10px; */
   width: 100%;
   background: #f97970;
-  height: 24px;
+  /* height: 24px; */
   will-change: left, right;
   animation: indeterminate 3.1s cubic-bezier(0.9, 0.815, 0.735, 0.395) infinite;
 }

@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet" />
     <link href="css/stylesheet.css" rel="stylesheet" />
+    <script src="js/index.js"></script>
 
     <title>Document</title>
   </head>
   <body>
-    <script src="js/index.js"></script>
+      <!-- deze hier sluiten en de andere containeres erop niet erin + betere claaname niet met div   -->
     <div class="bg_div">
-      <div id="karakter_container" class="karakter_container">
+    <div id="karakter_container" class="karakter_container" >   <!--  id eruit js aanpassen  -->
         <div class="karakter_info">
+            <!-- div om img  -->
           <img
             class="karakter_img"
             src="./assets/pic_nicolet.jpeg"
             alt="foto_kim"
-          />
-
+          />   
+          <!-- gebruik BAM, alle p claases weg + p vervangen door span   -->
           <div class="karakter_details">
-            <p class="name">Kim Schenk</p>
+            <p class="name">Kim Schenk</p> 
             <p class="function">Frontend Developer</p>
             <p class="organisation">FIOD</p>
           </div>
@@ -32,7 +34,8 @@
             <table>
               <tr>
                 <th>language</th>
-                <th></th>
+                <!-- <th></th> deze moet weg eerste cell groter, ook de overige ongebruikte cells weg 
+                  -->
                 <th>0%</th>
                 <th>50%</th>
                 <th>100%</th>
@@ -100,6 +103,7 @@
             <a href="#" onclick="showKarakter()">
               <i class="fas fa-female tooltip"></i>
               <div class="hide">Karakter</div>
+              <!-- verwiujder div en plaats content ook in css met de :hover + href eruit  -->
             </a>
           </li>
           <li class="menuItem">

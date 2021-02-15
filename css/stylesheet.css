@@ -5,7 +5,7 @@ body {
   font-size: 16px;
   color: #595959;
 }
-.bg_div {
+.background_page {
   position: absolute;
   top: 0;
   right: 0;
@@ -13,18 +13,22 @@ body {
   left: 0;
   background: url("http://www.baltana.com/files/wallpapers-16/Digital-Art-Background-HD-Wallpapers-41706.jpg")
     center / cover no-repeat;
+  z-index: -1;
 }
-/* menu iconen alleemaal in het center  */
-.menu {
+.contianer_menu {
+  height: 50px;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+}
+/* menu iconen alleemaal in het center  */
+.menu {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   /* grid-template-rows: repeat(11, minmax(120px, 1fr)); */
   background: #f97970;
-  padding: 15px 0 15px 25px;
+  /* padding: 15px 0 15px 25px; */
 }
 li {
   list-style: none;
@@ -71,7 +75,7 @@ i ~ div::first-letter {
   display: none;
   padding: 10px;
   border-radius: 50px;
-  font:  oblique small-caps bold 17px/17px Georgia, serif;
+  font: oblique small-caps bold 17px/17px Georgia, serif;
   background: #fff;
 }
 
@@ -88,23 +92,24 @@ i ~ div::first-letter {
 /* styling voor karakter_img */
 
 #karakter_container {
-    visibility: hidden;
+  visibility: hidden;
 }
 .karakter_container {
-  /* position: absolute;weg  */
-  top: 40px;
-  left: 40px;
   display: grid;
+  z-index: 1;
   /* grid-template-columns: repeat (auto-fit, minmax(300px, 1fr)); */
-  /* grid-template-columns: repeat( 2, 1fr); */
+  grid-template-columns: repeat(2, 1fr);
   background: #fff;
   border-radius: 50px;
   padding: 30px;
 }
-.karakter_img {
+
+/* moet schaalbaar worde  */
+
+.img_container img {
   width: 300px;
-  /* moet schaalbaar worde  */
 }
+
 .karakter_info {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -163,7 +168,7 @@ div .indeterminate:before {
   will-change: left, right;
   animation: indeterminate 3.1s cubic-bezier(0.9, 0.815, 0.735, 0.395) infinite;
 }
-
+/* moet bij 0 beginnen en naar exat punt gaan ook animatie   */
 @-webkit-keyframes indeterminate {
   0% {
     left: -35%;
@@ -192,7 +197,6 @@ div .indeterminate:before {
     right: -90%;
   }
 }
-
 
 /* table naat grid omzetten  */
 /* waatom daar geen absolute  */

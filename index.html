@@ -25,22 +25,31 @@
               alt="foto_kim"
             />
           </div>
-          <!-- gebruik BEM, alle p claases weg + p vervangen door span   -->
+          <!-- gebruik BEM, 
+            ***alle p claases weg + p vervangen door span   -->
           <div class="karakter_details">
-            <p class="name">Kim Schenk</p>
-            <p class="function">Frontend Developer</p>
-            <p class="organisation">FIOD</p>
+            <p> 
+            <span>Kim Schenk</span> 
+            <span>Frontend Developer</span>
+            <span>FIOD</span>
+                </p>
           </div>
         </div>
         <div class="karakter_skills">
           <h1>skills</h1>
-          <div class="karakter_table">
-            <table>
+          <div class="karakter_container_grid">
+<span class="karakter_kim">kim</span>
+<span class="karakter_html">html</span>
+<span class="karakter_css">css</span>
+<span class="karakter_js">js</span>
+          </div>
+          <!-- <div class="karakter_table"> -->
+            <!-- <table>
               <tr>
                 <th>language</th>
-                <!-- <th></th> deze moet weg eerste cell groter, ook de overige ongebruikte cells weg 
+                <!-- <th></th> deze moet weg eerste cell groter, ook de overige ongebruikte cells weg => grid 
                   -->
-                <th>0%</th>
+               <!-- <th>0%</th>
                 <th>50%</th>
                 <th>100%</th>
                 <th>150%</th>
@@ -97,7 +106,7 @@
                 <td></td>
                 <td></td>
               </tr>
-            </table>
+            </table> -->
           </div>
         </div>
       </div>
@@ -105,10 +114,10 @@
     <div class="contianer_menu">
       <nav>
         <ul class="menu progress">
-          <li class="menuItem">
-            <a href="#" onclick="showKarakter()">
-              <i class="fas fa-female tooltip"></i>
-              <div class="hide">Karakter</div>
+            <li class="menuItem">
+              <a href="#" onclick="showKarakter()">
+                <i class="fas fa-female tooltip"></i>
+                <div class="hide">Karakter</div>
               <!-- verwiujder div en plaats content ook in css met de :hover + href eruit  -->
             </a>
           </li>

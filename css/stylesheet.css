@@ -43,59 +43,63 @@ body {
   place-items: center center;
 }
 li {
-  list-style: none; 
-}
-
-ul li:hover {
-  border-bottom: 5px solid #02132c;
-}
-li:first-child {
-  border-bottom: 5px solid #02132c;
-  color: white;
-}
-/* onderzoek doen grid aatste element  */
-li:last-child {
-  grid-column-end: -1;
- 
-
-}
-li > a {
-  text-decoration: none;
-  font: #02132c 24px;
-  position: relative;
-  transition: all 0.5s ease-in;
-}
-
-li a > i {
-  font-size: 45px;
-  color: #fbefd7;
-  width: 100%;
-}
-i ~ div::first-letter {
-  color: #f97970;
-  font-size: 30px;
-}
-
-.hide {
-  position: absolute;
-  top: -125px;
-  left: -30px;
-  display: none;
-  padding: 10px;
-  border-radius: 50px;
-  font: oblique small-caps bold 17px/17px Georgia, serif;
-  background: #fff;
-}
-
-.tooltip:hover + .hide {
-  display: block;
-  /* dir wordt vwervangen door .hide .. hover gaat op li element =+ border op lementen */
-}
-
-/* note eigenlijk doet de a tag dit al bij default  */
-.progress {
-  cursor: progress;
-}
+    list-style: none; 
+  }
+  
+  ul li:hover {
+    border-bottom: 5px solid #02132c;
+  }
+  li:first-child {
+    border-bottom: 5px solid #02132c;
+    color: white;
+  }
+  /* onderzoek doen grid aatste element  */
+  li:last-child {
+    grid-column-end: -1;
+   
+  
+  }
+  li > a {
+    text-decoration: none;
+    font: #02132c 24px;
+    position: relative;
+    transition: all 0.5s ease-in;
+  }
+  
+  li a > i {
+    font-size: 45px;
+    color: #fbefd7;
+    width: 100%;
+  }
+  i ~ div::first-letter {
+    color: #f97970;
+    font-size: 30px;
+  }
+  
+  
+  .hide {
+      content: 'boe';
+    position: absolute;
+    top: -125px;
+    left: -30px;
+    display: none;
+    padding: 10px;
+    border-radius: 50px;
+    font: oblique small-caps bold 17px/17px Georgia, serif;
+    background: #fff;
+    z-index: 3;
+  }
+  
+  .tooltip:hover + .hide {
+    display: block;
+    /* dir wordt vwervangen door .hide .. hover gaat op li element =+ border op lementen */
+  }
+  
+  /* note eigenlijk doet de a tag dit al bij default  */
+  .progress {
+    cursor: progress;
+  }
+  
 
 /* styling voor karakter_img */
 
@@ -110,6 +114,7 @@ i ~ div::first-letter {
   background: #fff;
   border-radius: 50px;
   padding: 30px;
+  margin: 30px 0 0 0;
 }
 
 /* moet schaalbaar worde  */
@@ -120,29 +125,51 @@ i ~ div::first-letter {
 
 .karakter_info {
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 .karakter_details {
   min-width: 350px;
   margin: 30% 0 0 10%;
 }
-div.karakter_details > p {
+div.karakter_details p > span {
   text-transform: uppercase;
   font: 26px/ 35px bold;
+  display: block;
 }
-div.karakter_details > p::first-letter {
+div.karakter_details p > span::first-letter {
   color: #f97970;
   font-size: 35px;
 }
+
+
 .karakter_skills {
   display: grid;
-  grid-row: 2 / 6;
-  padding: 0 0 10% 9%;
+  grid-row: 2 / 3;
+  padding: 0 0 0 9%;
 }
 .karakter_skills h1 {
   text-transform: uppercase;
 }
+/* grid-table */
+
+.karakter_container_grid{
+    display: grid;
+    /* grid-row: 3 / 9; */
+    grid-template-rows: 50px 1fr;
+}
+.karakter_kim{
+    
+}
+
+
+
+
+
+
+
+
+
 .karakter_table table {
   width: 100%;
 }

@@ -44,46 +44,40 @@ body {
 li {
   list-style: none;
 }
-li > a {
-  text-decoration: none;
-  font: #02132c 24px;
-  position: relative;
-  transition: all 0.5s ease-in;
+li::content::first-letter {
+  color: #f97970 ;
+  font-size: 30px;
 }
 li:hover::after {
   content: "Karakter";
   position: absolute;
   top: -125px;
-  left: 100px;
+  left: 7%;
   padding: 10px;
   border-radius: 50px;
-  font: oblique small-caps bold 17px/17px Georgia, serif;
+  font: oblique small-caps bold 30px/21px Georgia, serif;
   background: #fff;
   
 }
 li:nth-child(2):hover::after {
   content: "Knowledge Book";
-  position: absolute;
   top: -125px;
-  left: 360px;
+  left: 27%;
 }
 li:nth-child(3):hover::after {
   content: "Achievements";
-  position: absolute;
   top: -125px;
-  left: 640px;
+  left: 47%;
 }
 li:nth-child(4):hover::after {
   content: "Quests";
-  position: absolute;
   top: -125px;
-  left: 950px;
+  left: 67%;
 }
 .menuItem_last:hover::after {
   content: "History";
-  position: absolute;
   top: -125px;
-  left: 1250px;
+  left: 87%;
 }
 
 li:first-child {
@@ -101,10 +95,7 @@ li a > i {
 li a > i:hover{
   color: #02132c;
 }
-li::content::first-letter {
-  color: #f97970 ;
-  font-size: 30px;
-}
+
 
 
 

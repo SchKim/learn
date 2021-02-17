@@ -16,12 +16,12 @@ body {
   z-index: -1;
 }
 .container_page {
-  height: calc(auto - 60px);
+  height: calc(auto - 90px);
   width: 80%;
   margin: 0 10%;
 }
 .contianer_menu {
-  height: 50px;
+  height: 90px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -30,29 +30,19 @@ body {
 
 /* Outside settings */
 
+
+
 /* **menu iconen alleemaal in het center  */
 .menu {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* grid-template-rows: repeat(11, minmax(120px, 1fr)); */
   background: #f97970;
   padding: 15px 0;
   place-items: center center;
 }
+
 li {
   list-style: none;
-}
-
-ul li:hover {
-  border-bottom: 5px solid #02132c;
-}
-li:first-child {
-  border-bottom: 5px solid #02132c;
-  color: white;
-}
-/* onderzoek doen grid aatste element  */
-.menuItem_last {
-  grid-column-end: -1;
 }
 li > a {
   text-decoration: none;
@@ -60,39 +50,63 @@ li > a {
   position: relative;
   transition: all 0.5s ease-in;
 }
+li:hover::after {
+  content: "Karakter";
+  position: absolute;
+  top: -125px;
+  left: 100px;
+  padding: 10px;
+  border-radius: 50px;
+  font: oblique small-caps bold 17px/17px Georgia, serif;
+  background: #fff;
+  
+}
+li:nth-child(2):hover::after {
+  content: "Knowledge Book";
+  position: absolute;
+  top: -125px;
+  left: 360px;
+}
+li:nth-child(3):hover::after {
+  content: "Achievements";
+  position: absolute;
+  top: -125px;
+  left: 640px;
+}
+li:nth-child(4):hover::after {
+  content: "Quests";
+  position: absolute;
+  top: -125px;
+  left: 950px;
+}
+.menuItem_last:hover::after {
+  content: "History";
+  position: absolute;
+  top: -125px;
+  left: 1250px;
+}
 
+li:first-child {
+  border-bottom: 5px solid #02132c;
+}
+/* ***onderzoek doen grid aatste element  */
+.menuItem_last {
+  grid-column-end: -1;
+}
 li a > i {
   font-size: 45px;
   color: #fbefd7;
   width: 100%;
 }
-i ~ div::first-letter {
-  color: #f97970;
+li a > i:hover{
+  color: #02132c;
+}
+li::content::first-letter {
+  color: #f97970 ;
   font-size: 30px;
 }
 
-.hide {
-  content: "boe";
-  position: absolute;
-  top: -125px;
-  left: -30px;
-  display: none;
-  padding: 10px;
-  border-radius: 50px;
-  font: oblique small-caps bold 17px/17px Georgia, serif;
-  background: #fff;
-  z-index: 3;
-}
 
-.tooltip:hover + .hide {
-  display: block;
-  /* dir wordt vwervangen door .hide .. hover gaat op li element =+ border op lementen */
-}
-
-/* note eigenlijk doet de a tag dit al bij default  */
-.progress {
-  cursor: progress;
-}
 
 /* styling voor karakter_img */
 
@@ -103,12 +117,13 @@ i ~ div::first-letter {
   border-radius: 50px;
   padding: 30px;
   margin: 30px 0 0 0;
+  max-width: 1000px
 }
 
-/* moet schaalbaar worde  */
+/* ***moet schaalbaar worde  */
 
 .img_container img {
-  width: 300px;
+  width: 100%;
 }
 
 .karakter_info {
@@ -116,16 +131,16 @@ i ~ div::first-letter {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
-.karakter_details {
+.karakter_container_details {
   min-width: 350px;
   margin: 30% 0 0 10%;
 }
-div.karakter_details p > span {
+div.karakter_container_details p > span {
   text-transform: uppercase;
   font: 26px/ 35px bold;
   display: block;
 }
-div.karakter_details p > span::first-letter {
+div.karakter_container_details p > span::first-letter {
   color: #f97970;
   font-size: 35px;
 }
@@ -156,3 +171,8 @@ progress{
 /* table naat grid omzetten  */
 /* waatom daar geen absolute  */
 /* media quries erin  */
+
+
+/* .img_container img {
+  width: 100%;
+} */

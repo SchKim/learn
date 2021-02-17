@@ -15,7 +15,7 @@
     <div class="background_page"></div>
     <div class="container_page">
       <div class="karakter_container">
-        <!--  id eruit js aanpassen  -->
+        <!--  ***id eruit js aanpassen  -->
         <div class="karakter_info">
           <!--*** div om img  -->
           <div class="img_container">
@@ -27,8 +27,8 @@
           </div>
           <!-- gebruik BEM, 
             ***alle p claases weg + p vervangen door span   -->
-            <!-- detail vervangendeoor container  -->
-          <div class="karakter_details"> 
+            <!--*** detail vervangendeoor container => ststaat al om top   -->
+          <div class="karakter_container_details"> 
             <p> 
             <span>Kim Schenk</span> 
             <span>Frontend Developer</span>
@@ -45,55 +45,53 @@
                 <span><strong>150%</strong></span>
                 <span><strong>200%</strong></span>
         
-                <span >kim</span>
+                <span><strong>kim</strong></span>
                 <span><progress value="100" max="100"></progress></span> <span><progress  value="100" > </progress></span> <span><progress value="100" max="100"> </progress></span> <span><progress  value="100" max="100"></progress></span> <span></span>
-                <span>html</span>
+                <span><strong>html</strong></span>
                 <span><progress value="50" max="100"></progress></span> <span><progress  value="0" > </progress></span> <span><progress value="0" max="100"> </progress></span> <span><progress  value="0" max="100"> </progress></span> <span></span>
-                <span >css</span>
+                <span><strong>css</strong></span>
                 <span><progress value="25" max="100"></progress></span> <span><progress  value="0" > </progress></span> <span><progress value="0" max="100"> </progress></span> <span><progress  value="0" max="100"> </progress></span> <span></span>
-                <span >javascript</span>
+                <span><strong>javascript</strong></span>
                 <span><progress value="10" max="100"></progress></span> <span><progress  value="0" > </progress></span> <span><progress value="0" max="100"> </progress></span> <span><progress  value="0" max="100"> </progress></span> <span></span>
-                <span >typeschript</span>
+                <span><strong>typeschript</strong></span>
                 <span><progress value="0" max="100"></progress></span> <span><progress  value="0" > </progress></span> <span><progress value="0" max="100"> </progress></span> <span><progress  value="0" max="100"> </progress></span> <span></span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="contianer_menu">
-      <nav>
-        <ul class="menu progress">
-            <li class="menuItem">
-              <a href="#" onclick="showKarakter()">
-                <i class="fas fa-female tooltip"></i>
-                <div class="hide">Karakter</div>
+
+   <!-- <div class="hide">Karakter</div> -->
               <!-- verwiujder div en plaats content ook in css met de :hover + href eruit, menuitem eruit menu -> li   -->
               <!-- hide maak je een tooltip van 
               visibility ipv dispaly block  -->
-            </a>
-          </li>
-          <li class="menuItem">
-            <a href="#">
-              <i class="fas fa-user-graduate tooltip"></i>
-              <div class="hide">Knowledge Book</div>
-            </a>
-          </li>
-          <li class="menuItem">
-            <a href="#">
-              <i class="fas fa-trophy tooltip"></i>
-              <div class="hide">Achievements</div>
-            </a>
-          </li>
-          <li class="menuItem">
-            <a href="#">
-              <i class="fas fa-question tooltip"></i>
-              <div class="hide">Quests</div>
+
+    <div class="contianer_menu">
+      <nav>
+        <ul class="menu">
+            <li>
+              <a onclick="showKarakter()">
+                <i class="fas fa-female"></i>
+              </a>
+            </li>
+            <li>
+                <a>
+                    <i class="fas fa-user-graduate"></i>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="fas fa-trophy"></i>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="fas fa-question"></i>
             </a>
           </li>
           <li class="menuItem_last">
-            <a href="#">
-              <i class="fas fa-history tooltip"></i>
-              <div class="hide">History</div>
+            <a>
+              <i class="fas fa-history"></i>
             </a>
           </li>
         </ul>

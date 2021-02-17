@@ -15,10 +15,10 @@ body {
     center / cover no-repeat;
   z-index: -1;
 }
-.container_page{
-    height: calc(auto - 60px);
-    width: 80%;
-    margin: 0 10%;
+.container_page {
+  height: calc(auto - 60px);
+  width: 80%;
+  margin: 0 10%;
 }
 .contianer_menu {
   height: 50px;
@@ -28,10 +28,7 @@ body {
   right: 0;
 }
 
-
 /* Outside settings */
-
-
 
 /* menu iconen alleemaal in het center  */
 .menu {
@@ -43,63 +40,59 @@ body {
   place-items: center center;
 }
 li {
-    list-style: none; 
-  }
-  
-  ul li:hover {
-    border-bottom: 5px solid #02132c;
-  }
-  li:first-child {
-    border-bottom: 5px solid #02132c;
-    color: white;
-  }
-  /* onderzoek doen grid aatste element  */
-  li:last-child {
-    grid-column-end: -1;
-   
-  
-  }
-  li > a {
-    text-decoration: none;
-    font: #02132c 24px;
-    position: relative;
-    transition: all 0.5s ease-in;
-  }
-  
-  li a > i {
-    font-size: 45px;
-    color: #fbefd7;
-    width: 100%;
-  }
-  i ~ div::first-letter {
-    color: #f97970;
-    font-size: 30px;
-  }
-  
-  
-  .hide {
-      content: 'boe';
-    position: absolute;
-    top: -125px;
-    left: -30px;
-    display: none;
-    padding: 10px;
-    border-radius: 50px;
-    font: oblique small-caps bold 17px/17px Georgia, serif;
-    background: #fff;
-    z-index: 3;
-  }
-  
-  .tooltip:hover + .hide {
-    display: block;
-    /* dir wordt vwervangen door .hide .. hover gaat op li element =+ border op lementen */
-  }
-  
-  /* note eigenlijk doet de a tag dit al bij default  */
-  .progress {
-    cursor: progress;
-  }
-  
+  list-style: none;
+}
+
+ul li:hover {
+  border-bottom: 5px solid #02132c;
+}
+li:first-child {
+  border-bottom: 5px solid #02132c;
+  color: white;
+}
+/* onderzoek doen grid aatste element  */
+li:last-child {
+  grid-column-end: -1;
+}
+li > a {
+  text-decoration: none;
+  font: #02132c 24px;
+  position: relative;
+  transition: all 0.5s ease-in;
+}
+
+li a > i {
+  font-size: 45px;
+  color: #fbefd7;
+  width: 100%;
+}
+i ~ div::first-letter {
+  color: #f97970;
+  font-size: 30px;
+}
+
+.hide {
+  content: "boe";
+  position: absolute;
+  top: -125px;
+  left: -30px;
+  display: none;
+  padding: 10px;
+  border-radius: 50px;
+  font: oblique small-caps bold 17px/17px Georgia, serif;
+  background: #fff;
+  z-index: 3;
+}
+
+.tooltip:hover + .hide {
+  display: block;
+  /* dir wordt vwervangen door .hide .. hover gaat op li element =+ border op lementen */
+}
+
+/* note eigenlijk doet de a tag dit al bij default  */
+.progress {
+  cursor: progress;
+}
 
 /* styling voor karakter_img */
 
@@ -142,7 +135,6 @@ div.karakter_details p > span::first-letter {
   font-size: 35px;
 }
 
-
 .karakter_skills {
   display: grid;
   grid-row: 2 / 3;
@@ -152,87 +144,22 @@ div.karakter_details p > span::first-letter {
   text-transform: uppercase;
 }
 /* grid-table */
-
-.karakter_container_grid{
+.karakter_container_th {
     display: grid;
-    /* grid-row: 3 / 9; */
-    grid-template-rows: 50px 1fr;
-}
-.karakter_kim{
-    
-}
-
-
-
-
-
-
-
-
-
-.karakter_table table {
-  width: 100%;
-}
-
-.karakter_table th {
-  font: bold;
-  text-align: left;
-  border-bottom: solid 1px #cccccc;
-  padding: 5px 0;
-}
-.karakter_table td {
-  border-bottom: solid 1px #f1f1f1;
-  text-transform: uppercase;
-}
-
-.background_position_td {
-  position: relative;
-  top: 0;
-  background: #f97970;
-  /* height: 24px; */
-  padding: 0;
-}
-div .indeterminate:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  /* left: 10px; */
-  width: 100%;
-  background: #f97970;
-  /* height: 24px; */
-  will-change: left, right;
-  animation: indeterminate 3.1s cubic-bezier(0.9, 0.815, 0.735, 0.395) infinite;
-}
-/* moet bij 0 beginnen en naar exat punt gaan ook animatie   */
-@-webkit-keyframes indeterminate {
-  0% {
-    left: -35%;
-    right: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    background: #f97970;
+    place-items: center end;
+  
   }
-  60% {
-    left: 100%;
-    right: -90%;
-  }
-  100% {
-    left: 100%;
-    right: -90%;
-  }
-}
-@keyframes indeterminate {
-  0% {
-    left: -35%;
-    right: 100%;
-  }
-  60% {
-    left: 100%;
-    right: -90%;
-  }
-  100% {
-    left: 100%;
-    right: -90%;
-  }
+
+.karakter_wrapper_td {
+  display: grid;
+  grid-template-rows: 1fr;
+  
 }
 
+
+/* 
 /* table naat grid omzetten  */
 /* waatom daar geen absolute  */
 /* media quries erin  */

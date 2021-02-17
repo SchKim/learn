@@ -8,24 +8,24 @@
     <link href="css/stylesheet.css" rel="stylesheet" />
     <script src="js/index.js"></script>
 
-    <title>Document</title>
+    <title>Kim's</title>
   </head>
   <body>
     <!-- ***deze hier sluiten en de andere containeres erop niet erin + betere claaname niet met div   -->
     <div class="background_page"></div>
     <div class="container_page">
-      <div class="karakter_container">
+      <div class="karakter">
         <!--  ***id eruit js aanpassen  -->
         <div class="karakter_info">
           <!--*** div om img  -->
-          <div class="img_container">
+          <div class="karakter_imgContainer">
             <img
               class="karakter_img"
               src="./assets/pic_nicolet.jpeg"
               alt="foto_kim"
             />
           </div>
-          <!-- gebruik BEM, 
+          <!-- ***gebruik BEM, 
             ***alle p claases weg + p vervangen door span   -->
             <!--*** detail vervangendeoor container => ststaat al om top   -->
           <div class="karakter_container_details"> 
@@ -61,10 +61,10 @@
       </div>
     </div>
 
-   <!-- <div class="hide">Karakter</div> -->
-              <!-- verwiujder div en plaats content ook in css met de :hover + href eruit, menuitem eruit menu -> li   -->
-              <!-- hide maak je een tooltip van 
-              visibility ipv dispaly block  -->
+  
+              <!-- ***verwiujder div en plaats content ook in css met de :hover + href eruit, menuitem eruit menu -> li   -->
+              <!-- h***ide maak je een tooltip van 
+              ***visibility ipv dispaly block  -->
 
     <div class="contianer_menu">
       <nav>
@@ -87,13 +87,13 @@
             <li>
                 <a>
                     <i class="fas fa-question"></i>
-            </a>
-          </li>
-          <li class="menuItem_last">
-            <a>
-              <i class="fas fa-history"></i>
-            </a>
-          </li>
+                </a>
+            </li>
+            <li class="menu__lastitem">
+                <a>
+                    <i class="fas fa-history"></i>
+                </a>
+            </li>
         </ul>
       </nav>
     </div>

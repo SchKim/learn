@@ -48,6 +48,14 @@ li::content::first-letter {
   color: #f97970 ;
   font-size: 30px;
 }
+
+/* ???? als je de eerste li op before zet en de rest op after .. gaat het vanaf de tweede niet goed hoe dan ? */
+/* de before komt tussen de li en a opening */
+/* de after komt tussen de li en a sluit tag */
+
+/* !! omdat de alle li de hover aan staat doet die befor en after tegeloijk  */
+
+
 li:hover::after {
   content: "Karakter";
   position: absolute;
@@ -74,7 +82,7 @@ li:nth-child(4):hover::after {
   top: -125px;
   left: 67%;
 }
-.menuItem_last:hover::after {
+.menu__lastitem:hover::after {
   content: "History";
   top: -125px;
   left: 87%;
@@ -84,7 +92,7 @@ li:first-child {
   border-bottom: 5px solid #02132c;
 }
 /* ***onderzoek doen grid aatste element  */
-.menuItem_last {
+.menu__lastitem {
   grid-column-end: -1;
 }
 li a > i {
@@ -102,7 +110,7 @@ li a > i:hover{
 /* styling voor karakter_img */
 
 
-.karakter_container {
+.karakter {
   visibility: hidden;
   background: #fff;
   border-radius: 50px;
@@ -113,7 +121,7 @@ li a > i:hover{
 
 /* ***moet schaalbaar worde  */
 
-.img_container img {
+.karakter_imgContainer img {
   width: 100%;
 }
 
@@ -159,11 +167,11 @@ progress{
 
 
 /* 
-/* table naat grid omzetten  */
-/* waatom daar geen absolute  */
+/* ***table naat grid omzetten  */
+/* ***waatom daar geen absolute  */
 /* media quries erin  */
 
 
-/* .img_container img {
+/* .karakter_imgContainer img {
   width: 100%;
 } */

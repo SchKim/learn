@@ -1,7 +1,8 @@
 
 
 function showKarakter() {
-  var state = document.getElementById(
+  var state = document.getElementsByClassName(
     "karakter_container");
-    state.style.visibility = state.style.visibility === "hidden" ? "visible" : "hidden";
+    var aNode = state[0];
+    aNode.style.visibility = aNode.style.visibility === "hidden" ? "visible" : "hidden";
 }

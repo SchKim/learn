@@ -96,14 +96,9 @@ i ~ div::first-letter {
 
 /* styling voor karakter_img */
 
-#karakter_container {
-  visibility: hidden;
-}
-.karakter_container {
-  /* display: grid; */
 
-  /* grid-template-columns: repeat (auto-fit, minmax(300px, 1fr)); */
-  /* grid-template-columns: 1fr; */
+.karakter_container {
+  visibility: hidden;
   background: #fff;
   border-radius: 50px;
   padding: 30px;

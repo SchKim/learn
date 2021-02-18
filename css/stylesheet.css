@@ -27,11 +27,6 @@ body {
   left: 0;
   right: 0;
 }
-
-/* Outside settings */
-
-
-
 /* **menu iconen alleemaal in het center  */
 .menu {
   display: grid;
@@ -45,7 +40,7 @@ li {
   list-style: none;
 }
 li::content::first-letter {
-  color: #f97970 ;
+  color: #f97970;
   font-size: 30px;
 }
 
@@ -54,7 +49,6 @@ li::content::first-letter {
 /* de after komt tussen de li en a sluit tag */
 
 /* !! omdat de alle li de hover aan staat doet die befor en after tegeloijk  */
-
 
 li:hover::after {
   content: "Karakter";
@@ -65,7 +59,6 @@ li:hover::after {
   border-radius: 50px;
   font: oblique small-caps bold 30px/21px Georgia, serif;
   background: #fff;
-  
 }
 li:nth-child(2):hover::after {
   content: "Knowledge Book";
@@ -100,15 +93,9 @@ li a > i {
   color: #fbefd7;
   width: 100%;
 }
-li a > i:hover{
+li a > i:hover {
   color: #02132c;
 }
-
-
-
-
-/* styling voor karakter_img */
-
 
 .karakter {
   visibility: hidden;
@@ -116,7 +103,7 @@ li a > i:hover{
   border-radius: 50px;
   padding: 30px;
   margin: 30px 0 0 0;
-  max-width: 1000px
+  max-width: 1000px;
 }
 
 /* ***moet schaalbaar worde  */
@@ -143,10 +130,9 @@ div.karakter_container_details p > span::first-letter {
   color: #f97970;
   font-size: 35px;
 }
-.karakter_skills{
+.karakter_skills {
   margin: 30px 0 0 0;
 }
-
 
 /* grid-table */
 .karakter_container_th {
@@ -159,18 +145,15 @@ div.karakter_container_details p > span::first-letter {
 .karakter_container_th > span {
   padding: 8px 4px;
   text-transform: uppercase;
-
 }
-progress{
-  margin: 0 -15px 0 0 ;
+progress {
+  margin: 0 -15px 0 0;
 }
-
 
 /* 
 /* ***table naat grid omzetten  */
 /* ***waatom daar geen absolute  */
 /* media quries erin  */
-
 
 /* .karakter_imgContainer img {
   width: 100%;

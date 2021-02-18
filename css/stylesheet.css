@@ -4,6 +4,7 @@ body {
   font-family: Open Sans, San-Serif;
   font-size: 16px;
   color: #595959;
+  box-sizing: border-box;
 }
 .background_page {
   position: absolute;
@@ -130,18 +131,58 @@ div.karakter_container_details p > span::first-letter {
   color: #f97970;
   font-size: 35px;
 }
-.karakter_skills {
+/* .karakter_skills {
   margin: 30px 0 0 0;
+} */
+.karakter_skills{
+  margin: 0;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
 }
-
 /* grid-table */
-.karakter_container_th {
+.karakter_container_table {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-column-gap: 15px;  
+  height: 10vh;
+  width: 70vw;
 
   background: #f97970;
   padding: 10px 0 10px 65px;
 }
+
+.karakter_title1{
+  grid-row: 2 ;
+}
+.karakter_title2{
+  grid-row: 3 ;
+}
+.karakter_title3{
+  grid-row: 4 ;
+}
+.karakter_title4{
+  grid-row: 5 ;
+}
+.karakter_title5{
+  grid-row: 6 ;
+
+}
+.karakter_title6{
+  grid-row: 7  ;
+}
+
+
+
+
+[class*="bar"] {
+  grid-column:2 / 7;
+  border-radius: 5px 5px 0 0;
+  background-color: #ff4136;
+}
+
+
 .karakter_container_th > span {
   padding: 8px 4px;
   text-transform: uppercase;

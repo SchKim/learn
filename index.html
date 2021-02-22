@@ -11,24 +11,15 @@
     <title>Kim's</title>
   </head>
   <body>
-    <!-- ***deze hier sluiten en de andere containeres erop niet erin + betere claaname niet met div   -->
-    <div class="background_page"></div>
-    <div class="container_page">
-      <div class="karakter">
-        <!--  ***id eruit js aanpassen  -->
-        <div class="karakter_info">
-          <!--*** div om img  -->
-          <div class="karakter_imgContainer">
-            <img
-              class="karakter_img"
-              src="./assets/pic_nicolet.jpeg"
-              alt="foto_kim"
-            />
+    <div class="page__background"></div>
+    <div class="page__container">
+      <div class="karakter__revealer">
+        <div class="karakter__content">
+          <div class="content__imgWrapper">
+            <img src="./assets/pic_nicolet.jpeg" alt="foto_kim" />
           </div>
-          <!-- ***gebruik BEM, 
-            ***alle p claases weg + p vervangen door span   -->
-          <!--*** detail vervangendeoor container => ststaat al om top   -->
-          <div class="karakter_container_details">
+
+          <div class="content__text">
             <p>
               <span>Kim Schenk</span>
               <span>Frontend Developer</span>
@@ -36,13 +27,10 @@
             </p>
           </div>
         </div>
-        <div class="karakter_skills">
-          <div class="karakter_container_table">
-            <!--*** strong eruit  -->
-            <div class="karakter_container_table_row">
-              <div class="karakter_container_table_row_container">
-                <!--*** strong eruit  -->
-
+        <div class="karakter__table">
+          <div class="table">
+            <div class="table__row">
+              <div class="row__items">
                 <div>skills</div>
                 <div>kim</div>
                 <div>html</div>
@@ -51,8 +39,8 @@
                 <div>typeschript</div>
               </div>
             </div>
-            <div class="karakter_container_table_column">
-              <div class="karakter_container_table_column_container">
+            <div class="table__column">
+              <div class="column__items">
                 <div>0%</div>
                 <div>25%</div>
                 <div>50%</div>
@@ -73,15 +61,10 @@
       </div>
     </div>
 
-    <!-- ***verwiujder div en plaats content ook in css met de :hover + href eruit, menuitem eruit menu -> li   -->
-    <!-- h***ide maak je een tooltip van 
-              ***visibility ipv dispaly block  -->
-
-    <div class="contianer_menu">
+    <div class="menu">
       <nav>
-        <ul class="menu">
+        <ul class="menu__elements">
           <li>
-            <!-- wat gebreurt er als een focus is op een icon ? kan je er doorheen tabben  -->
             <a onclick="showKarakter()">
               <i class="fas fa-female"></i>
             </a>
@@ -111,3 +94,15 @@
     </div>
   </body>
 </html>
+
+<!-- wat gebreurt er als een focus is op een icon ? kan je er doorheen tabben  -->
+<!-- ***verwiujder div en plaats content ook in css met de :hover + href eruit, menuitem eruit menu -> li   -->
+<!-- h***ide maak je een tooltip van 
+              ***visibility ipv dispaly block  -->
+<!--*** strong eruit  -->
+<!-- ***gebruik BEM, 
+            ***alle p claases weg + p vervangen door span   -->
+<!--*** detail vervangendeoor container => ststaat al om top   -->
+<!--*** div om img  -->
+<!--  ***id eruit js aanpassen  -->
+<!-- ***deze hier sluiten en de andere containeres erop niet erin + betere claaname niet met div   -->

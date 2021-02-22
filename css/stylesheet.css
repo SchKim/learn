@@ -6,7 +6,7 @@ body {
   color: #595959;
   box-sizing: border-box;
 }
-.background_page {
+.page__background {
   position: absolute;
   top: 0;
   right: 0;
@@ -16,20 +16,22 @@ body {
     center / cover no-repeat;
   z-index: -1;
 }
-.container_page {
+.page__container {
   height: calc(auto - 90px);
   width: 80%;
   margin: 0 10%;
 }
-.contianer_menu {
+
+/* menu */
+.menu {
   height: 90px;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
-/* **menu iconen alleemaal in het center  */
-.menu {
+
+.menu__elements {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   background: #f97970;
@@ -45,14 +47,7 @@ li::content::first-letter {
   font-size: 30px;
 }
 
-/* ???? als je de eerste li op before zet en de rest op after .. gaat het vanaf de tweede niet goed hoe dan ? */
-/* de before komt tussen de li en a opening */
-/* de after komt tussen de li en a sluit tag */
-
-/* !! omdat de alle li de hover aan staat doet die befor en after tegeloijk  */
-
 li:hover::after {
-  /* karacter op child 1  */
   content: "Karakter";
   position: absolute;
   top: -125px;
@@ -86,7 +81,7 @@ li:nth-child(4):hover::after {
 li:first-child {
   border-bottom: 5px solid #02132c;
 }
-/* ***onderzoek doen grid aatste element  */
+
 .menu__lastitem {
   grid-column-end: -1;
 }
@@ -102,7 +97,10 @@ li a > i:hover {
 a:focus {
   background-color: red !important;
 }
-.karakter {
+
+
+/* karakter container  */
+.karakter__revealer {
   visibility: hidden;
   background: #fff;
   border-radius: 50px;
@@ -111,65 +109,58 @@ a:focus {
   max-width: 1000px;
 }
 
-/* ***moet schaalbaar worde  */
-
-.karakter_imgContainer img {
+.content__imgWrapper img {
   width: 100%;
 }
 
-.karakter_info {
+.karakter__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
-.karakter_container_details {
+.content__text {
   min-width: 350px;
   margin: 30% 0 0 10%;
 }
-div.karakter_container_details p > span {
+div.content__text p > span {
   text-transform: uppercase;
   font: 26px/ 35px bold;
   display: block;
 }
-div.karakter_container_details p > span::first-letter {
+div.content__text p > span::first-letter {
   color: #f97970;
   font-size: 35px;
 }
 
-.karakter_skills{
+.karakter__table{
   margin: 30px 0 0 0;
-  color: #02132c;
   display: flex;
-  justify-content: center;
-  text-transform: uppercase;
 }
-/* grid-table */
-
-
-.karakter_container_table{
+.table{
   display:grid;
   grid-template-columns:250px 1fr;
   background: #f97970;
+  color: #02132c;
   text-transform: uppercase;
   padding: 5% 8%;
   height: 20vh;
   width: 70vw;
 }
-  .karakter_container_table_row{
-  grid-row:2;  
+.table__row{
+  grid-row:1;  
 }
-.karakter_container_table_column{
+.table__column{
   grid-column: 2;
-   grid-row:2
+   grid-row:1;
 }
 
-.karakter_container_table_row_container{
-    display:grid;
+.row__items{
+  display:grid;
   grid-template-rows: repeat(11, 25px);
   margin: 5px 0;
 }
 
-.karakter_container_table_column_container{
+.column__items{
   display:grid;
   grid-template-columns: repeat(9, 1fr);
 }
@@ -188,19 +179,33 @@ grid-column: 1 /9;
 .bar3{
   grid-column:1/ 5;
 }
-/* 
-/* ***table naat grid omzetten  */
-/* ***waatom daar geen absolute  */
-/* ***media quries erin  */
+
 
 
 @media screen and (max-width: 600px) {
 
-  .karakter_imgContainer {
+  .content__imgWrapper {
     visibility: hidden;
     z-index: -1;
   }
-  div.karakter_container_details p > span {
+  div.content__text p > span {
     font-size: 20px;
   }
 }
+
+/* **menu iconen alleemaal in het center  */
+
+/* ???? als je de eerste li op before zet en de rest op after .. gaat het vanaf de tweede niet goed hoe dan ? */
+/* de before komt tussen de li en a opening */
+/* de after komt tussen de li en a sluit tag */
+
+/* !! omdat de alle li de hover aan staat doet die befor en after tegeloijk  */
+
+/* ***onderzoek doen grid aatste element  */
+/* ***moet schaalbaar worde  */
+
+/* grid-table */
+/* 
+/* ***table naat grid omzetten  */
+/* ***waatom daar geen absolute  */
+/* ***media quries erin  */

@@ -52,6 +52,7 @@ li::content::first-letter {
 /* !! omdat de alle li de hover aan staat doet die befor en after tegeloijk  */
 
 li:hover::after {
+  /* karacter op child 1  */
   content: "Karakter";
   position: absolute;
   top: -125px;
@@ -98,6 +99,9 @@ li a > i:hover {
   color: #02132c;
 }
 
+a:focus {
+  background-color: red !important;
+}
 .karakter {
   visibility: hidden;
   background: #fff;
@@ -140,50 +144,63 @@ div.karakter_container_details p > span::first-letter {
   text-transform: uppercase;
 }
 /* grid-table */
-.karakter_container_table {
-  display: grid;
-  grid-template-columns: 2fr repeat(10, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+
+
+.karakter_container_table{
+  display:grid;
+  grid-template-columns:250px 1fr;
+  background: #f97970;
+  text-transform: uppercase;
+  padding: 5% 8%;
   height: 20vh;
   width: 70vw;
-  background: #f97970;
-  padding: 10px 0 10px 65px;
+}
+  .karakter_container_table_row{
+  grid-row:2;  
+}
+.karakter_container_table_column{
+  grid-column: 2;
+   grid-row:2
 }
 
-.karakter_title1,.bar1{
-  grid-row: 3 ;
-}
-.karakter_title2,.bar2{
-  grid-row: 4 ;
-}
-.karakter_title3,.bar3{
-  grid-row: 5 ;
-}
-.karakter_title4,.bar4{
-  grid-row: 6 ;
-}
-.karakter_title5,.bar5{
-  grid-row: 7 ;
-
+.karakter_container_table_row_container{
+    display:grid;
+  grid-template-rows: repeat(11, 25px);
+  margin: 5px 0;
 }
 
-
-[class*="bar"] {
-  
-  border-radius: 50px;
+.karakter_container_table_column_container{
+  display:grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+[class*="bar"]{
+   border-radius: 50px;
   background-color: #fff;
   margin: 5px 0;
  text-align: end;
 }
 .bar1{
-grid-column: 2 /10;
+grid-column: 1 /9;
 }
-
+.bar2{
+  grid-column: 1;
+}
+.bar3{
+  grid-column:1/ 5;
+}
 /* 
 /* ***table naat grid omzetten  */
 /* ***waatom daar geen absolute  */
-/* media quries erin  */
+/* ***media quries erin  */
 
-/* .karakter_imgContainer img {
-  width: 100%;
-} */
+
+@media screen and (max-width: 600px) {
+
+  .karakter_imgContainer {
+    visibility: hidden;
+    z-index: -1;
+  }
+  div.karakter_container_details p > span {
+    font-size: 20px;
+  }
+}

@@ -27,81 +27,85 @@
           </div>
           <!-- ***gebruik BEM, 
             ***alle p claases weg + p vervangen door span   -->
-            <!--*** detail vervangendeoor container => ststaat al om top   -->
-          <div class="karakter_container_details"> 
-            <p> 
-            <span>Kim Schenk</span> 
-            <span>Frontend Developer</span>
-            <span>FIOD</span>
+          <!--*** detail vervangendeoor container => ststaat al om top   -->
+          <div class="karakter_container_details">
+            <p>
+              <span>Kim Schenk</span>
+              <span>Frontend Developer</span>
+              <span>FIOD</span>
             </p>
           </div>
         </div>
         <div class="karakter_skills">
-            <div class="karakter_container_table">
-         
-            
-                <span> <strong>skills</strong> </span>
-                <span> <strong>0%</strong>  </span>
-                <span> <strong>25%</strong>  </span>
-                <span><strong>50%</strong></span>
-                <span> <strong>75%</strong>  </span>
-                <span><strong>100%</strong></span>
-                <span> <strong>125%</strong>  </span>
-                <span><strong>150%</strong></span>
-                <span> <strong>175%</strong>  </span>
-                <span><strong>200%</strong></span>
-        
-                <div class="karakter_title1"><strong>kim</strong></div>
-                <div class="karakter_title2"><strong>html</strong></div>
-                <div class="karakter_title3"><strong>css</strong></div>
-                <div class="karakter_title4"><strong>javascript</strong></div>
-                <div class="karakter_title5"><strong>typeschript</strong></div>
-               
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <div class="bar4"></div>
-                <div class="bar5"></div>
-                
+          <div class="karakter_container_table">
+            <!--*** strong eruit  -->
+            <div class="karakter_container_table_row">
+              <div class="karakter_container_table_row_container">
+                <!--*** strong eruit  -->
+
+                <div>skills</div>
+                <div>kim</div>
+                <div>html</div>
+                <div>css</div>
+                <div>javascript</div>
+                <div>typeschript</div>
+              </div>
+            </div>
+            <div class="karakter_container_table_column">
+              <div class="karakter_container_table_column_container">
+                <div>0%</div>
+                <div>25%</div>
+                <div>50%</div>
+                <div>75%</div>
+                <div>100%</div>
+                <div>125%</div>
+                <div>150%</div>
+                <div>175%</div>
+                <div>200%</div>
+
+                <div class="bar1">200%</div>
+                <div class="bar2">25%</div>
+                <div class="bar3">100%</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-  
-              <!-- ***verwiujder div en plaats content ook in css met de :hover + href eruit, menuitem eruit menu -> li   -->
-              <!-- h***ide maak je een tooltip van 
+    <!-- ***verwiujder div en plaats content ook in css met de :hover + href eruit, menuitem eruit menu -> li   -->
+    <!-- h***ide maak je een tooltip van 
               ***visibility ipv dispaly block  -->
 
     <div class="contianer_menu">
       <nav>
         <ul class="menu">
-            <li>
-              <a onclick="showKarakter()">
-                <i class="fas fa-female"></i>
-              </a>
-            </li>
-            <li>
-                <a>
-                    <i class="fas fa-user-graduate"></i>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i class="fas fa-trophy"></i>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i class="fas fa-question"></i>
-                </a>
-            </li>
-            <li class="menu__lastitem">
-                <a>
-                    <i class="fas fa-history"></i>
-                </a>
-            </li>
+          <li>
+            <!-- wat gebreurt er als een focus is op een icon ? kan je er doorheen tabben  -->
+            <a onclick="showKarakter()">
+              <i class="fas fa-female"></i>
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fas fa-user-graduate"></i>
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fas fa-trophy"></i>
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fas fa-question"></i>
+            </a>
+          </li>
+          <li class="menu__lastitem">
+            <a>
+              <i class="fas fa-history"></i>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

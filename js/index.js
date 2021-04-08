@@ -6,12 +6,26 @@ const parm = "products";
 const fetchProducts = () => {
   fetch(URL)
     .then((res) => res.json())
-    .then((json) => {
-      console.log(json);
-      let products = json;
-      document.getElementById("data1").innerHTML = products;
-    })
+    .then((products) => showProducts(products))
     .catch((rejectionReason) => console.log(rejectionReason));
+
+  showProducts = (products) => {
+    const productDiv = document.querySelector("#data1");
+    products.forEach((product) => {
+      const productTitle = document.createElement("p");
+      const productPrice = document.createElement("div");
+      const productImg = document.createElement("img");
+
+      productTitle.innerText = `titele: ${product.title}`;
+      productPrice.innerHTML = `Price: € ${product.price}`;
+      productImg.setAttribute("src", `${product.image}`);
+      productImg.setAttribute("width", "300px");
+
+      productDiv.append(productTitle);
+      productDiv.append(productPrice);
+      productDiv.append(productImg);
+    });
+  };
 };
 
 fetchProducts();

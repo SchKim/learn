@@ -94,10 +94,9 @@ li a > i:hover {
   color: #02132c;
 }
 
-a:focus {
-  background-color: red !important;
+li a:focus > i {
+  color: #02132c;
 }
-
 /* karakter container  */
 
 .karakter__revealer {
@@ -109,7 +108,7 @@ a:focus {
   max-width: 1000px;
 }
 
-.content__imgWrapper img {
+.content__img_wrapper img {
   width: 100%;
 }
 
@@ -181,8 +180,6 @@ div.content__text p > span::first-letter {
 }
 
 @media only screen and (max-width: 900px) {
-
-
   .menu__lastitem:hover::after {
     top: -125px;
     left: 69%;
@@ -190,28 +187,20 @@ div.content__text p > span::first-letter {
 
   .content__imgWrapper {
     visibility: hidden;
-   
   }
   div.content__text p > span {
     font-size: 20px;
   }
   .table {
-   
     grid-template-columns: 50px 1fr;
     font-size: small;
-   
   }
   .menu__elements {
- 
-    background: rebeccapurple; 
-  
+    background: rebeccapurple;
   }
 }
 
-
 @media only screen and (max-width: 600px) {
-
-
   .menu__lastitem:hover::after {
     top: -125px;
     left: 73%;
@@ -219,21 +208,16 @@ div.content__text p > span::first-letter {
 
   .content__imgWrapper {
     visibility: hidden;
-   
   }
   div.content__text p > span {
     font-size: 20px;
   }
   .table {
-   
     grid-template-columns: 50px 1fr;
     font-size: small;
-   
   }
   .menu__elements {
- 
-    background: red; 
-  
+    background: red;
   }
 }
 

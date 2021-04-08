@@ -55,12 +55,19 @@ getProducts();
 async function fetchData() {
   try {
     const response = await fetch(URL);
-
     jsonResponse = response.json();
     console.log(jsonResponse);
+    // toonProducts(jsonResponse);
   } catch (err) {
     console.log(err);
   }
+
+  // TO DO ik was hiergebleven en stond op het punt om een map() te maken maar heb een opdracht en ga daar nu mee verder
+
+  // const toonProducts = (products) => {
+  //   const productDiv = document.querySelector(".data2");
+  //   products.map();
+  // };
 }
 fetchData();
 

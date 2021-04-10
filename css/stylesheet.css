@@ -131,6 +131,24 @@ div.content__text p > span::first-letter {
   color: #f97970;
   font-size: 35px;
 }
+/* ??? */
+#karakter__icon_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+#karakter__icon_wrapper h1 {
+  display: none;
+}
+
+#karakter__icon_wrapper p {
+  display: none;
+}
+
+#karakter__icon_wrapper i {
+  color: #f97970;
+  font-size: 35px;
+}
+/* pp */
 
 .karakter__table {
   margin: 30px 0 0 0;
@@ -181,8 +199,6 @@ div.content__text p > span::first-letter {
 }
 
 @media only screen and (max-width: 900px) {
-
-
   .menu__lastitem:hover::after {
     top: -125px;
     left: 69%;
@@ -190,28 +206,20 @@ div.content__text p > span::first-letter {
 
   .content__imgWrapper {
     visibility: hidden;
-   
   }
   div.content__text p > span {
     font-size: 20px;
   }
   .table {
-   
     grid-template-columns: 50px 1fr;
     font-size: small;
-   
   }
   .menu__elements {
- 
-    background: rebeccapurple; 
-  
+    background: rebeccapurple;
   }
 }
 
-
 @media only screen and (max-width: 600px) {
-
-
   .menu__lastitem:hover::after {
     top: -125px;
     left: 73%;
@@ -219,21 +227,16 @@ div.content__text p > span::first-letter {
 
   .content__imgWrapper {
     visibility: hidden;
-   
   }
   div.content__text p > span {
     font-size: 20px;
   }
   .table {
-   
     grid-template-columns: 50px 1fr;
     font-size: small;
-   
   }
   .menu__elements {
- 
-    background: red; 
-  
+    background: red;
   }
 }
 

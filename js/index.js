@@ -13,6 +13,10 @@
 
 // fetchCharacter();
 
+// ik wil een occlick op het i element
+// wlke kijket welke id ik heb geslecreerd en toont daar de juiste info bij
+// optie is ook nog een for loop met een div er omheen op id
+
 let CharacterJson = [
   {
     id: 1,
@@ -82,20 +86,30 @@ let CharacterJson = [
 const iconKarakter = (characters) => {
   const characterDiv = document.querySelector("#karakter__icon_wrapper");
   characters.forEach((character) => {
+    const characterIcon = document.createElement("i");
     const characterTitle = document.createElement("h1");
     const characterDiscription = document.createElement("p");
-    const characterIcon = document.createElement("i");
+
+    characterIcon.setAttribute("class", `${character.symbol}`);
     characterTitle.innerText = character.title;
     characterDiscription.innerText = character.description;
-    characterIcon.setAttribute("class", `${character.symbol}`);
+
+    characterDiv.append(characterIcon);
     characterDiv.append(characterTitle);
     characterDiv.append(characterDiscription);
-    characterDiv.append(characterIcon);
   });
 };
 
 const characters = CharacterJson;
 iconKarakter(characters);
+
+document.querySelector("#karakter__icon_wrapper").onclick = function () {
+  onClickIcon();
+};
+
+function onClickIcon() {
+  alert("hoi");
+}
 
 function showKarakter() {
   var state = document.getElementsByClassName("karakter__revealer");

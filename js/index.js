@@ -122,6 +122,10 @@ const iconKarakter = (characters) => {
 const characters = CharacterJson;
 iconKarakter(characters);
 
+// conste tageget button en dan next element
+
+// of unieke id op inner div en die op display zetten
+
 // function typedOut() {
 //   let text = "jsdjskdjwkjsdk jdkwjnkwdn ";
 //   let putInArray = text.split("");
@@ -139,18 +143,12 @@ iconKarakter(characters);
 // }
 // typedOut();
 
-function showMore(kip) {
-  console.log(kip);
-  let state = document.querySelectorAll(".characterInnerDiv");
-  console.log(state);
-  //console.log(NodeList);
-  let idArray = Array.from(state);
-  console.log(idArray);
-  // typedOut();
-  let aNode = state[5];
-  aNode.style.display =
-    // aNode.style.visibility === "hidden" ? "visible" : "hidden";
-    aNode.style.display === "none" ? "block" : "none";
+function showMore(event) {
+  let show = event.target.nextSibling;
+  // console.log(event.target.nextSibling);
+
+  console.log(show);
+  show.style.display = "block";
 }
 
 //document.querySelectorAll(".characterBtn").addEventListener("click", showMore);

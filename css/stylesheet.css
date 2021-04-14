@@ -135,7 +135,7 @@ div.content__text p > span::first-letter {
 #karakter__icon_wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .characterInnerDiv {
@@ -146,11 +146,9 @@ div.content__text p > span::first-letter {
 #karakter__icon_wrapper i {
   font-size: 25px;
   padding: 3%;
+  pointer-events: none;
 }
 
-#karakter__icon_wrapper i:nth-child(even) {
-  color: #f97970;
-}
 /* pp */
 
 .karakter__table {

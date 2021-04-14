@@ -122,10 +122,19 @@ const iconKarakter = (characters) => {
 const characters = CharacterJson;
 iconKarakter(characters);
 
+function showMore(event) {
+  var show = event.target.nextSibling;
+  // console.log(event.target.nextSibling);
+
+  console.log(show);
+  show.style.display = "block";
+  typedOut();
+}
+
 function typedOut() {
   let text = "jsdjskdjwk jsdk jdkwjnkwdn ";
   let putInArray = text.split("");
-  console.log(putInArray);
+  //console.log(putInArray);
   let timer;
   function loopText() {
     if (putInArray.length > 0) {
@@ -141,14 +150,6 @@ function typedOut() {
   loopText();
 }
 
-function showMore(event) {
-  let show = event.target.nextSibling;
-  // console.log(event.target.nextSibling);
-
-  console.log(show);
-  show.style.display = "block";
-}
-typedOut();
-// volgende uitdagingen zijn
-// test letter voor letter
-// juiste tekst bij juiste icon
+// typedOut moet ergens tussen bij showmore
+//show zijn nextSibling titel moet die tonen met ::marker
+// de de characterInnerDiv > p die moet worden gebruikt om het de displayen

@@ -122,26 +122,24 @@ const iconKarakter = (characters) => {
 const characters = CharacterJson;
 iconKarakter(characters);
 
-// conste tageget button en dan next element
-
-// of unieke id op inner div en die op display zetten
-
-// function typedOut() {
-//   let text = "jsdjskdjwkjsdk jdkwjnkwdn ";
-//   let putInArray = text.split("");
-//   let timer;
-//   function loopText() {
-//     if (putInArray.length > 0) {
-//       document.getElementById("type_text").innerText += putInArray.shift();
-//     } else {
-//       clearTimeout(timer);
-//       return false;
-//     }
-//     timer = setTimeout("loopText()", 70);
-//   }
-//   loopText();
-// }
-// typedOut();
+function typedOut() {
+  let text = "jsdjskdjwk jsdk jdkwjnkwdn ";
+  let putInArray = text.split("");
+  console.log(putInArray);
+  let timer;
+  function loopText() {
+    if (putInArray.length > 0) {
+      document.getElementById("type_text").innerHTML += putInArray.shift();
+    } else {
+      clearTimeout(timer);
+      return false;
+    }
+    timer = setTimeout(function () {
+      loopText();
+    }, 270);
+  }
+  loopText();
+}
 
 function showMore(event) {
   let show = event.target.nextSibling;
@@ -150,20 +148,7 @@ function showMore(event) {
   console.log(show);
   show.style.display = "block";
 }
-
-//document.querySelectorAll(".characterBtn").addEventListener("click", showMore);
-
-// ik wil eem id om de container te plaatsen
-// dan een div
-// in die div
-// een button om een i tag
-// een h1
-// en een p
-
-// als je op de button klikt dan gaat er een event af
-// event querySelectorall
-// dat event zorget er voor dat de h1 en p zichtbaar worden
-
+typedOut();
 // volgende uitdagingen zijn
 // test letter voor letter
 // juiste tekst bij juiste icon

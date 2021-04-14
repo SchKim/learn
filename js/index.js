@@ -41,7 +41,7 @@ let CharacterJson = [
   },
   {
     id: 4,
-    title: "Development stack",
+    title: "Developmentstack",
     description:
       "Ik ben een enthousiast aan het ontwikkelen met HTML, CSS, JS, TS, React en Styled components ",
     symbol: "fas fa-code",
@@ -55,7 +55,7 @@ let CharacterJson = [
   },
   {
     id: 6,
-    title: "Vrije tijd",
+    title: "Vrijetijd",
     description:
       "De meeste vrije tijd breng ik met mijn lieve dochter Lenthè door. Uiteraard is ontwikkellen een een grote hobby daarnaast heb ik nog een paard en een huis van 100 jaar oud waar het nodige aan moet gebeuren. Daar gaat de rest van de tijd inzitten",
     symbol: "fas fa-battery-three-quarters",
@@ -83,37 +83,89 @@ let CharacterJson = [
   },
 ];
 
-const iconKarakter = (characters) => {
-  const characterDiv = document.querySelector("#karakter__icon_wrapper");
-  characters.forEach((character) => {
-    const characterIcon = document.createElement("i");
-    const characterTitle = document.createElement("h1");
-    const characterDiscription = document.createElement("p");
-
-    characterIcon.setAttribute("class", `${character.symbol}`);
-    characterTitle.innerText = character.title;
-    characterDiscription.innerText = character.description;
-
-    characterDiv.append(characterIcon);
-    characterDiv.append(characterTitle);
-    characterDiv.append(characterDiscription);
-  });
-};
-
-const characters = CharacterJson;
-iconKarakter(characters);
-
-document.querySelector("#karakter__icon_wrapper").onclick = function () {
-  onClickIcon();
-};
-
-function onClickIcon() {
-  alert("hoi");
-}
-
 function showKarakter() {
   var state = document.getElementsByClassName("karakter__revealer");
   var aNode = state[0];
   aNode.style.visibility =
     aNode.style.visibility === "hidden" ? "visible" : "hidden";
 }
+
+const iconKarakter = (characters) => {
+  const characterDivID = document.querySelector("#karakter__icon_wrapper");
+  characters.forEach((character) => {
+    const characterDiv = document.createElement("div");
+    const characterButton = document.createElement("button");
+    const characterIcon = document.createElement("i");
+    const characterInnerDiv = document.createElement("div");
+    const characterTitle = document.createElement("h1");
+    const characterDiscription = document.createElement("p");
+
+    characterButton.classList.add("characterBtn");
+    characterButton.addEventListener("click", showMore);
+    characterIcon.setAttribute("class", `${character.symbol}`); // classlist maken
+    characterInnerDiv.classList.add("characterInnerDiv");
+    characterTitle.classList.add("characterTitle_moreInfo");
+    characterTitle.innerText = character.title;
+
+    characterDiscription.classList.add("characterDiscription_moreInfo");
+    characterDiscription.innerText = character.description;
+
+    characterDivID.appendChild(characterDiv);
+    characterDiv.appendChild(characterButton);
+    characterButton.appendChild(characterIcon);
+    characterDiv.appendChild(characterInnerDiv);
+    characterInnerDiv.appendChild(characterTitle);
+    characterInnerDiv.appendChild(characterDiscription);
+  });
+};
+
+const characters = CharacterJson;
+iconKarakter(characters);
+
+// function typedOut() {
+//   let text = "jsdjskdjwkjsdk jdkwjnkwdn ";
+//   let putInArray = text.split("");
+//   let timer;
+//   function loopText() {
+//     if (putInArray.length > 0) {
+//       document.getElementById("type_text").innerText += putInArray.shift();
+//     } else {
+//       clearTimeout(timer);
+//       return false;
+//     }
+//     timer = setTimeout("loopText()", 70);
+//   }
+//   loopText();
+// }
+// typedOut();
+
+function showMore(kip) {
+  console.log(kip);
+  let state = document.querySelectorAll(".characterInnerDiv");
+  console.log(state);
+  //console.log(NodeList);
+  let idArray = Array.from(state);
+  console.log(idArray);
+  // typedOut();
+  let aNode = state[5];
+  aNode.style.display =
+    // aNode.style.visibility === "hidden" ? "visible" : "hidden";
+    aNode.style.display === "none" ? "block" : "none";
+}
+
+//document.querySelectorAll(".characterBtn").addEventListener("click", showMore);
+
+// ik wil eem id om de container te plaatsen
+// dan een div
+// in die div
+// een button om een i tag
+// een h1
+// en een p
+
+// als je op de button klikt dan gaat er een event af
+// event querySelectorall
+// dat event zorget er voor dat de h1 en p zichtbaar worden
+
+// volgende uitdagingen zijn
+// test letter voor letter
+// juiste tekst bij juiste icon

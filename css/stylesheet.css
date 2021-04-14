@@ -137,11 +137,9 @@ div.content__text p > span::first-letter {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-#karakter__icon_wrapper h1 {
-  display: none;
-}
 
-#karakter__icon_wrapper p {
+.characterInnerDiv {
+  /* visibility: hidden; */
   display: none;
 }
 

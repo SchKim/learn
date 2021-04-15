@@ -99,16 +99,22 @@ const iconKarakter = (characters) => {
     const characterInnerDiv = document.createElement("div");
     const characterTitle = document.createElement("h1");
     const characterDiscription = document.createElement("p");
+    // const event = new CustomEvent("build", {
+    //   detail: character.characterDiscription,
+    // });
 
     characterButton.classList.add("characterBtn");
-    characterButton.addEventListener("click", showMore);
+    characterButton.addEventListener("click", (event) =>
+      showMore(event, character.description)
+    );
     characterIcon.setAttribute("class", `${character.symbol}`); // classlist maken
     characterInnerDiv.classList.add("characterInnerDiv");
     characterTitle.classList.add("characterTitle_moreInfo");
     characterTitle.innerText = character.title;
 
     characterDiscription.classList.add("characterDiscription_moreInfo");
-    characterDiscription.innerText = character.description;
+    //characterDiscription.typedOut.character.description;
+    //characterDiscription.innerText = character.description; //<=
 
     characterDivID.appendChild(characterDiv);
     characterDiv.appendChild(characterButton);
@@ -122,23 +128,27 @@ const iconKarakter = (characters) => {
 const characters = CharacterJson;
 iconKarakter(characters);
 
-function showMore(event) {
+function showMore(event, discription) {
+  console.log(event);
   var show = event.target.nextSibling;
-  // console.log(event.target.nextSibling);
-
+  // console.log(event.target.nextSibling.nextSibling);
   console.log(show);
   show.style.display = "block";
-  typedOut();
+  console.log(discription);
+  typedOut(show, discription);
 }
 
-function typedOut() {
-  let text = "jsdjskdjwk jsdk jdkwjnkwdn ";
+function typedOut(show, e) {
+  text = e;
+  console.log(text);
   let putInArray = text.split("");
-  //console.log(putInArray);
+  console.log(putInArray);
   let timer;
   function loopText() {
     if (putInArray.length > 0) {
-      document.getElementById("type_text").innerHTML += putInArray.shift();
+      // document.getElementById("type_text").innerHTML += putInArray.shift();
+
+      show.innerHTML += putInArray.shift();
     } else {
       clearTimeout(timer);
       return false;

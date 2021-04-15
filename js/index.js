@@ -101,6 +101,7 @@ const iconKarakter = (characters) => {
     const characterDiscription = document.createElement("p");
 
     characterButton.classList.add("characterBtn");
+
     characterButton.addEventListener("click", (event) =>
       showMore(event, character.description)
     );
@@ -125,20 +126,14 @@ const characters = CharacterJson;
 iconKarakter(characters);
 
 function showMore(event, discription) {
-  // console.log(event);
   var show = event.target.nextSibling;
-  console.log(show);
-  show.style.display = "block";
-  if (show.style.display === "block") {
-    typedOut(show, discription);
-  } else {
-    show.style.display = "none";
-  }
-  //console.log(discription);
+
+  show.style.display = show.style.display === "block" ? "none" : "block";
+  typedOut(show, discription);
 }
 
-function typedOut(show, e) {
-  text = e;
+function typedOut(show, element) {
+  text = element;
   // console.log(text);
   let putInArray = text.split("");
   //console.log(putInArray);

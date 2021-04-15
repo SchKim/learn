@@ -146,9 +146,18 @@ div.content__text p > span::first-letter {
 .characterInnerDiv {
   display: none;
 }
-.characterInnerDiv p {
-  min-width: 100vh;
+.characterTitle_moreInfo {
+  display: list-item;
+  content: " ";
 }
+.characterTitle_moreInfo::marker {
+  color: #f97970;
+}
+
+.characterInnerDiv p {
+  min-width: 50vh;
+}
+
 /* pp */
 
 .karakter__table {
@@ -219,6 +228,9 @@ div.content__text p > span::first-letter {
     background: rebeccapurple;
   }
 }
+.characterInnerDiv p {
+  min-width: 40vh;
+}
 
 @media only screen and (max-width: 600px) {
   .menu__lastitem:hover::after {
@@ -239,6 +251,9 @@ div.content__text p > span::first-letter {
   .menu__elements {
     background: red;
   }
+}
+.characterInnerDiv p {
+  min-width: 25vh;
 }
 
 /* **menu iconen alleemaal in het center  */

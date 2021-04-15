@@ -55,7 +55,7 @@ let CharacterJson = [
   },
   {
     id: 6,
-    title: "Vrijetijd",
+    title: "Vrije tijd",
     description:
       "De meeste vrije tijd breng ik met mijn lieve dochter Lenthè door. Uiteraard is ontwikkellen een een grote hobby daarnaast heb ik nog een paard en een huis van 100 jaar oud waar het nodige aan moet gebeuren. Daar gaat de rest van de tijd inzitten",
     symbol: "fas fa-battery-three-quarters",
@@ -64,7 +64,7 @@ let CharacterJson = [
     id: 7,
     title: "Interest",
     description:
-      "Mijn interesses liggen bij  HTML, CSS, JS, TS, React en Styled components daar wil ik mij eerst om focussen en daarna kijk ik verder",
+      "Mijn interesses liggen bij  HTML, CSS, JS, TS, React en Styled components daar wil ik mij eerst om focussen en daarna kijk ik verder. ",
     symbol: "fas fa-glasses",
   },
   {
@@ -78,7 +78,7 @@ let CharacterJson = [
     id: 9,
     title: "Specialties",
     description:
-      "Ja dat vind ik altijd een beetje lastig om over mijzelf te zeggen. Mensen blijven graag eten als ik kook. Ben goed in het organiseren van dingen. ",
+      "Ja dat vind ik altijd een beetje lastig om over mijzelf te zeggen. Mijn dochter vind mij de liefste Mama, dat is ook mijn grootste specialiteit. Mensen blijven graag eten als ik kook. Ben goed in het organiseren van dingen. ",
     symbol: "fas fa-grin-stars",
   },
 ];
@@ -129,8 +129,12 @@ function showMore(event, discription) {
   var show = event.target.nextSibling;
   console.log(show);
   show.style.display = "block";
+  if (show.style.display === "block") {
+    typedOut(show, discription);
+  } else {
+    show.style.display = "none";
+  }
   //console.log(discription);
-  typedOut(show, discription);
 }
 
 function typedOut(show, e) {
@@ -148,11 +152,10 @@ function typedOut(show, e) {
     }
     timer = setTimeout(function () {
       loopText();
-    }, 270);
+    }, 70);
   }
   loopText();
 }
 
-// typedOut moet ergens tussen bij showmore
-//show zijn nextSibling titel moet die tonen met ::marker
-// de de characterInnerDiv > p die moet worden gebruikt om het de displayen
+// to doe niet alles te gelijk open
+// marker

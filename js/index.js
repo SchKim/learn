@@ -99,9 +99,6 @@ const iconKarakter = (characters) => {
     const characterInnerDiv = document.createElement("div");
     const characterTitle = document.createElement("h1");
     const characterDiscription = document.createElement("p");
-    // const event = new CustomEvent("build", {
-    //   detail: character.characterDiscription,
-    // });
 
     characterButton.classList.add("characterBtn");
     characterButton.addEventListener("click", (event) =>
@@ -113,8 +110,7 @@ const iconKarakter = (characters) => {
     characterTitle.innerText = character.title;
 
     characterDiscription.classList.add("characterDiscription_moreInfo");
-    //characterDiscription.typedOut.character.description;
-    //characterDiscription.innerText = character.description; //<=
+    //characterDiscription.innerText = character.description;
 
     characterDivID.appendChild(characterDiv);
     characterDiv.appendChild(characterButton);
@@ -129,25 +125,22 @@ const characters = CharacterJson;
 iconKarakter(characters);
 
 function showMore(event, discription) {
-  console.log(event);
+  // console.log(event);
   var show = event.target.nextSibling;
-  // console.log(event.target.nextSibling.nextSibling);
   console.log(show);
   show.style.display = "block";
-  console.log(discription);
+  //console.log(discription);
   typedOut(show, discription);
 }
 
 function typedOut(show, e) {
   text = e;
-  console.log(text);
+  // console.log(text);
   let putInArray = text.split("");
-  console.log(putInArray);
+  //console.log(putInArray);
   let timer;
   function loopText() {
     if (putInArray.length > 0) {
-      // document.getElementById("type_text").innerHTML += putInArray.shift();
-
       show.innerHTML += putInArray.shift();
     } else {
       clearTimeout(timer);

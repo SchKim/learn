@@ -138,17 +138,17 @@ div.content__text p > span::first-letter {
   justify-content: space-between;
 }
 
-.characterInnerDiv {
-  /* visibility: hidden; */
-  display: none;
-}
-
 #karakter__icon_wrapper i {
   font-size: 25px;
   padding: 3%;
   pointer-events: none;
 }
-
+.characterInnerDiv {
+  display: none;
+}
+.characterInnerDiv p {
+  min-width: 100vh;
+}
 /* pp */
 
 .karakter__table {

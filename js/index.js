@@ -103,7 +103,7 @@ const iconKarakter = (characters) => {
     characterButton.classList.add("characterBtn");
 
     characterButton.addEventListener("click", (event) =>
-      showMore(event, character.description)
+      showMore(event.target.nextSibling, character.description)
     );
     characterIcon.setAttribute("class", `${character.symbol}`); // classlist maken
     characterInnerDiv.classList.add("characterInnerDiv");
@@ -125,20 +125,21 @@ const iconKarakter = (characters) => {
 const characters = CharacterJson;
 iconKarakter(characters);
 
-function showMore(event, discription) {
-  const show = event.target.nextSibling;
-
+function showMore(show, text) {
   show.style.display = show.style.display === "block" ? "none" : "block";
-  typedOut(show, discription);
+  const putInArray = text.split("");
+  console.log(putInArray);
+  loopText(show, putInArray);
 }
 
-function typedOut(show, element) {
-  text = element;
-  // console.log(text);
-  let putInArray = text.split("");
-  //console.log(putInArray);
-  let timer;
-  function loopText() {
+// function typedOut(show, text) {
+// console.log(text);
+// const putInArray = text.split("");
+//console.log(putInArray);
+
+function loopText(show, putInArray) {
+  let timer = 0;
+  if (putInArray) {
     if (putInArray.length > 0) {
       show.innerHTML += putInArray.shift();
     } else {
@@ -146,11 +147,12 @@ function typedOut(show, element) {
       return false;
     }
     timer = setTimeout(function () {
-      loopText();
+      loopText(show, putInArray);
     }, 70);
   }
-  loopText();
 }
+// loopText();
+//}
 
 // to doe niet alles te gelijk open
 // marker
@@ -158,3 +160,4 @@ function typedOut(show, element) {
 // ie styling topassen
 // event meer uitkleden
 // kijken meer mogelijke heden van event
+// nieuwe div voor het tontn van afgeseelde tekst

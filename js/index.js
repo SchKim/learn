@@ -126,7 +126,7 @@ const characters = CharacterJson;
 iconKarakter(characters);
 
 function showMore(event, discription) {
-  var show = event.target.nextSibling;
+  const show = event.target.nextSibling;
 
   show.style.display = show.style.display === "block" ? "none" : "block";
   typedOut(show, discription);
@@ -154,3 +154,7 @@ function typedOut(show, element) {
 
 // to doe niet alles te gelijk open
 // marker
+//over zetten naar know book
+// ie styling topassen
+// event meer uitkleden
+// kijken meer mogelijke heden van event

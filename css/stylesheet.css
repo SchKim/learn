@@ -101,7 +101,7 @@ a:focus {
 /* karakter container  */
 
 .karakter__revealer {
-  visibility: hidden;
+  display: none;
   background: #fff;
   border-radius: 50px;
   padding: 10px 30px;
@@ -208,6 +208,21 @@ div.content__text p > span::first-letter {
   grid-column: 1/ 5;
 }
 
+/* 
+Knowbook */
+
+.knowledgeBook__revealer {
+  display: none;
+  background: #fff;
+  border-radius: 50px;
+  padding: 10px 30px;
+  margin: 30px 0 0 0;
+  max-width: 1000px;
+}
+
+.characterBtn i {
+  color: #f97970;
+}
 @media only screen and (max-width: 900px) {
   .menu__lastitem:hover::after {
     top: -125px;

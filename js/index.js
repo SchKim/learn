@@ -1,22 +1,3 @@
-// const URL = "./assets/api.json";
-
-// const bla = new Request("../assets/api.json");
-
-// const fetchCharacter = () => {
-//   fetch(bla)
-//     .then((res) => res.json())
-//     .then((data) => console.log(data))
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// };
-
-// fetchCharacter();
-
-// ik wil een occlick op het i element
-// wlke kijket welke id ik heb geslecreerd en toont daar de juiste info bij
-// optie is ook nog een for loop met een div er omheen op id
-
 let CharacterJson = [
   {
     id: 1,
@@ -84,10 +65,14 @@ let CharacterJson = [
 ];
 
 function showKarakter() {
-  var state = document.getElementsByClassName("karakter__revealer");
-  var aNode = state[0];
-  aNode.style.visibility =
-    aNode.style.visibility === "hidden" ? "visible" : "hidden";
+  let state = document.getElementsByClassName("karakter__revealer");
+  let aNode = state[0];
+  aNode.style.display = aNode.style.display === "none" ? "block" : "none";
+}
+function showKnowledgeBook() {
+  let state = document.getElementsByClassName("knowledgeBook__revealer");
+  let aNode = state[0];
+  aNode.style.display = aNode.style.display === "none" ? "block" : "none";
 }
 
 const iconKarakter = (characters) => {
@@ -122,6 +107,7 @@ const iconKarakter = (characters) => {
   });
 };
 
+// karakter_text_wrapper
 const characters = CharacterJson;
 iconKarakter(characters);
 
@@ -155,9 +141,9 @@ function loopText(show, putInArray) {
 //}
 
 // to doe niet alles te gelijk open
-// marker
-//over zetten naar know book
-// ie styling topassen
+
+//**over zetten naar know book
+//** */ ie styling topassen
 // event meer uitkleden
 // kijken meer mogelijke heden van event
 // nieuwe div voor het tontn van afgeseelde tekst

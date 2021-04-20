@@ -85,8 +85,6 @@ const iconKarakter = (characters) => {
     const characterButton = document.createElement("button");
     const characterIcon = document.createElement("i");
 
-    const characterInnerDiv = document.createElement("div"); // eruit => dan remove en add en append gebruiken op de nieuwe div
-
     const characterTitle = document.createElement("h1");
     const characterDiscription = document.createElement("p");
 
@@ -97,49 +95,27 @@ const iconKarakter = (characters) => {
     );
     characterIcon.setAttribute("class", `${character.symbol}`); // classlist maken
 
-    characterInnerDiv.classList.add("characterInnerDiv");
-
     characterTitle.classList.add("characterTitle_moreInfo");
     characterTitle.innerText = character.title;
 
     characterDiscription.classList.add("characterDiscription_moreInfo");
-    //characterDiscription.innerText = character.description;
 
     characterDivID.appendChild(characterDiv);
     characterDiv.appendChild(characterButton);
     characterButton.appendChild(characterIcon);
-
-    characterDiv.appendChild(characterInnerDiv);
-    characterInnerDiv.appendChild(characterTitle);
-    characterInnerDiv.appendChild(characterDiscription);
   });
-  // einde forEach
-  // const showDiv = document.createElement("h3");
-  // showDiv.innerHTML = character.description;
-  // characterDiv.append(showDiv);
 };
-// div.classList.replace("characterInnerDiv", "karakter_text_wrapper");
-// in de forEach loopt haalt die de data op.... nu is het zo dat die ook een div mee loopt die hide heeft.... deze div moet in een aparte div komen
-// kan ik de classes hier repalcen ? => NEE
-
-// wat kan wel ??? opties ???
-
-// karakter_text_wrapper
 
 function showMore(text, targetdiv) {
-  // show.style.display = show.style.display === "block" ? "none" : "block";
-  targetdiv.innerHTML = text;
-  //console.log(targetdiv);
   const putInArray = text.split("");
   console.log(putInArray);
   loopText(putInArray, targetdiv);
 }
-
-// function typedOut(show, text) {
-// console.log(text);
-// const putInArray = text.split("");
-//console.log(putInArray);
-
+//in var opslaan hoevell keer i text aan het lopen en wlke knop
+//
+//hoeveel keer looptext
+// clear time out triggeren al je wilt stoppen ]
+// als er een text aan het lopee is is de text van dezelede knop aan het lopen doeniks. i het een andere knp willes text
 function loopText(putInArray, show) {
   let timer = 0;
   if (putInArray) {
@@ -154,17 +130,7 @@ function loopText(putInArray, show) {
     }, 70);
   }
 }
-// loopText();
-//}
-
-// to doe niet alles te gelijk open
-
-//**over zetten naar know book
-//** */ ie styling topassen
-// event meer uitkleden
-// kijken meer mogelijke heden van event
-// nieuwe div voor het tontn van afgeseelde tekst
-
-iconKarakter(characters);
-//looptext werlen maken met qurey selectot target div
+// looptext niet herhandelijk aanroepen vanuit loop text maar roept andere functie aan
+//inner functie in set loopt ext timer buiten loopt text als timer niet 0 is
 // high order stuv=xtuur
+iconKarakter(characters);

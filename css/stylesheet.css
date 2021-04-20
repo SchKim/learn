@@ -136,6 +136,7 @@ div.content__text p > span::first-letter {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 #karakter__icon_wrapper i {
@@ -156,6 +157,12 @@ div.content__text p > span::first-letter {
 
 .characterInnerDiv p {
   min-width: 50vh;
+}
+
+.karakter_text_wrapper {
+  max-width: 80%;
+  /* min-height: 10%; */
+  padding: 10%; 0
 }
 
 /* pp */

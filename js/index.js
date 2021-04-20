@@ -64,6 +64,9 @@ let CharacterJson = [
   },
 ];
 
+const textDiv = document.querySelector(".karakter_text_wrapper");
+const characters = CharacterJson;
+
 function showKarakter() {
   let state = document.getElementsByClassName("karakter__revealer");
   let aNode = state[0];
@@ -81,17 +84,21 @@ const iconKarakter = (characters) => {
     const characterDiv = document.createElement("div");
     const characterButton = document.createElement("button");
     const characterIcon = document.createElement("i");
-    const characterInnerDiv = document.createElement("div");
+
+    const characterInnerDiv = document.createElement("div"); // eruit => dan remove en add en append gebruiken op de nieuwe div
+
     const characterTitle = document.createElement("h1");
     const characterDiscription = document.createElement("p");
 
     characterButton.classList.add("characterBtn");
 
     characterButton.addEventListener("click", (event) =>
-      showMore(event.target.nextSibling, character.description)
+      showMore(character.description, textDiv)
     );
     characterIcon.setAttribute("class", `${character.symbol}`); // classlist maken
+
     characterInnerDiv.classList.add("characterInnerDiv");
+
     characterTitle.classList.add("characterTitle_moreInfo");
     characterTitle.innerText = character.title;
 
@@ -101,21 +108,31 @@ const iconKarakter = (characters) => {
     characterDivID.appendChild(characterDiv);
     characterDiv.appendChild(characterButton);
     characterButton.appendChild(characterIcon);
+
     characterDiv.appendChild(characterInnerDiv);
     characterInnerDiv.appendChild(characterTitle);
     characterInnerDiv.appendChild(characterDiscription);
   });
+  // einde forEach
+  // const showDiv = document.createElement("h3");
+  // showDiv.innerHTML = character.description;
+  // characterDiv.append(showDiv);
 };
+// div.classList.replace("characterInnerDiv", "karakter_text_wrapper");
+// in de forEach loopt haalt die de data op.... nu is het zo dat die ook een div mee loopt die hide heeft.... deze div moet in een aparte div komen
+// kan ik de classes hier repalcen ? => NEE
+
+// wat kan wel ??? opties ???
 
 // karakter_text_wrapper
-const characters = CharacterJson;
-iconKarakter(characters);
 
-function showMore(show, text) {
-  show.style.display = show.style.display === "block" ? "none" : "block";
+function showMore(text, targetdiv) {
+  // show.style.display = show.style.display === "block" ? "none" : "block";
+  targetdiv.innerHTML = text;
+  //console.log(targetdiv);
   const putInArray = text.split("");
   console.log(putInArray);
-  loopText(show, putInArray);
+  loopText(putInArray, targetdiv);
 }
 
 // function typedOut(show, text) {
@@ -123,7 +140,7 @@ function showMore(show, text) {
 // const putInArray = text.split("");
 //console.log(putInArray);
 
-function loopText(show, putInArray) {
+function loopText(putInArray, show) {
   let timer = 0;
   if (putInArray) {
     if (putInArray.length > 0) {
@@ -133,7 +150,7 @@ function loopText(show, putInArray) {
       return false;
     }
     timer = setTimeout(function () {
-      loopText(show, putInArray);
+      loopText(putInArray, show);
     }, 70);
   }
 }
@@ -147,3 +164,7 @@ function loopText(show, putInArray) {
 // event meer uitkleden
 // kijken meer mogelijke heden van event
 // nieuwe div voor het tontn van afgeseelde tekst
+
+iconKarakter(characters);
+//looptext werlen maken met qurey selectot target div
+// high order stuv=xtuur

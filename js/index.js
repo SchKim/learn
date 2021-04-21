@@ -105,11 +105,6 @@ const iconKarakter = (characters) => {
   });
 };
 
-function showMore(texts) {
-  const splitText = texts.split("");
-  return splitText;
-}
-
 //in var opslaan hoevell keer i text aan het lopen en wlke knop
 //hoeveel keer looptext
 // clear time out triggeren al je wilt stoppen ]
@@ -130,33 +125,29 @@ function loopText(textLoss, show) {
     }, 70);
   }
 }
-//waar moet dit staan met die higher order dinges
 
 function stopTimer() {
   clearTimeout(timer);
 }
-function main(text, targetDiv, id) {
-  console.log(text);
-  // console.log(targetDiv);
-  // console.log(id);
+let laatste = 0;
 
-  const last = id;
-  // console.log(id);
-  // console.log(id);
-  // console.log(last != last);
-  // if (last == last) {
-  //   console.log("ik ben if");
-  //   stopTimer(timer);
-  //   return false;
-  // } else {
-  //   console.log("ik ben else");
-  showMore(text);
-  const gesplitteText = showMore(text); // ??????? waarom moet ik text als parameter hier mee geven ?? shormore heeft toch mij uitput ?
-  console.log(gesplitteText);
-  //uitkomst shormmore in loop text & looptext uit show more halen
-  loopText(gesplitteText, targetDiv);
+function main(text, targetDiv, id) {
+  targetDiv.innerHTML = "";
+
+  if (laatste == id) {
+    console.log("ik ben if");
+    stopTimer(timer);
+
+    return false;
+  } else {
+    laatste = id;
+    console.log("ik ben else");
+    const gesplitteText = text.split("");
+    //uitkomst shormmore in loop text & looptext uit show more halen
+    loopText(gesplitteText, targetDiv);
+  }
+  targetDiv.innerHTML = "";
 }
-//}
 
 // looptext niet herhandelijk aanroepen vanuit loop text maar roept andere functie aan
 //inner functie in set loopt ext timer buiten loopt text als timer niet 0 is

@@ -156,13 +156,12 @@ div.content__text p > span::first-letter {
 }
 
 .characterInnerDiv p {
-  min-width: 50vh;
+  min-width: 50vw;
 }
 
 .karakter_text_wrapper {
   max-width: 80%;
-  /* min-height: 10%; */
-  padding: 10%; 0
+  padding: 10%;
 }
 
 /* pp */
@@ -251,7 +250,7 @@ Knowbook */
   }
 }
 .characterInnerDiv p {
-  min-width: 40vh;
+  min-width: 40vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -275,7 +274,7 @@ Knowbook */
   }
 }
 .characterInnerDiv p {
-  min-width: 25vh;
+  min-width: 25vw;
 }
 
 /* **menu iconen alleemaal in het center  */

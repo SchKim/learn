@@ -66,19 +66,14 @@ let CharacterJson = [
 
 const textDiv = document.querySelector(".karakter_text_wrapper");
 const characters = CharacterJson;
+let timer = 0;
 
-function showKarakter() {
-  let state = document.getElementsByClassName("karakter__revealer");
-  let aNode = state[0];
-  aNode.style.display = aNode.style.display === "none" ? "block" : "none";
-}
-function showKnowledgeBook() {
-  let state = document.getElementsByClassName("knowledgeBook__revealer");
-  let aNode = state[0];
-  aNode.style.display = aNode.style.display === "none" ? "block" : "none";
+function showMenuItem(classname) {
+  const state = document.querySelector(`.${classname}`);
+  state.style.display = state.style.display === "none" ? "block" : "none";
 }
 
-const iconKarakter = (characters) => {
+const mainKarakter = (characters) => {
   const characterDivID = document.querySelector("#karakter__icon_wrapper");
   characters.forEach((character) => {
     const characterDiv = document.createElement("div");
@@ -88,12 +83,8 @@ const iconKarakter = (characters) => {
     const characterDiscription = document.createElement("p");
 
     characterButton.classList.add("characterBtn");
-    // characterButton.addEventListener(
-    //   "click",
-    //   (event) => showMore(character.description, textDiv) // ik kan hier het carajter id meegeven
-
     characterButton.addEventListener("click", (event) =>
-      main(character.description, textDiv, character.id)
+      clickHandlerKarakter(character.description, textDiv)
     );
     characterIcon.setAttribute("class", `${character.symbol}`);
     characterTitle.classList.add("characterTitle_moreInfo");
@@ -105,56 +96,29 @@ const iconKarakter = (characters) => {
   });
 };
 
-//in var opslaan hoevell keer i text aan het lopen en wlke knop
-//hoeveel keer looptext
-// clear time out triggeren al je wilt stoppen ]
-// als er een text aan het lopee is is de text van dezelede knop aan het lopen doeniks. i het een andere knp willes text
-let timer = 0;
-
-function loopText(textLoss, show) {
-  if (textLoss) {
-    if (textLoss.length > 0) {
-      show.innerHTML += textLoss.shift();
-    } else {
-      console.log(timer);
-      stopTimer(timer);
-      return false;
-    }
-    timer = setTimeout(function () {
-      loopText(textLoss, show);
-    }, 70);
+function loopText(charArray, textContainer) {
+  if (!charArray) return;
+  stopTimer();
+  if (charArray.length > 0) {
+    textContainer.innerHTML += charArray.shift();
+  } else {
+    console.log(timer);
+    stopTimer(timer);
+    return false;
   }
+  timer = setTimeout(function () {
+    loopText(charArray, textContainer);
+  }, 70);
 }
 
 function stopTimer() {
   clearTimeout(timer);
 }
-let laatste = 0;
 
-function main(text, targetDiv, id) {
+function clickHandlerKarakter(text, targetDiv) {
+  stopTimer(timer);
   targetDiv.innerHTML = "";
-
-  if (laatste == id) {
-    console.log("ik ben if");
-    stopTimer(timer);
-
-    return false;
-  } else {
-    laatste = id;
-    console.log("ik ben else");
-    const gesplitteText = text.split("");
-    //uitkomst shormmore in loop text & looptext uit show more halen
-    loopText(gesplitteText, targetDiv);
-  }
-  targetDiv.innerHTML = "";
+  const gesplitteText = text.split("");
+  loopText(gesplitteText, targetDiv);
 }
-
-// looptext niet herhandelijk aanroepen vanuit loop text maar roept andere functie aan
-//inner functie in set loopt ext timer buiten loopt text als timer niet 0 is
-// high order stuctuur
-iconKarakter(characters);
-
-//main krijgt 2 aggumenten binnen text , targetdiv
-// text geeft die mee aam showmore daar de uitkomst van
-// mpet worden gebruikt als para meter voor loop text + de div
-// dit voor komt
+mainKarakter(characters);

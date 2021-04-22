@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet" />
     <link href="css/stylesheet.css" rel="stylesheet" />
-    <script src="js/index.js"></script>
+
+    <script src="assets/api.js"></script>
 
     <title>Kim's</title>
   </head>
@@ -18,7 +19,6 @@
           <div class="content__imgWrapper">
             <img src="./assets/pic_nicolet.jpeg" alt="foto_kim" />
           </div>
-
           <div class="content__text">
             <p>
               <span>Kim Schenk</span>
@@ -27,6 +27,7 @@
             </p>
           </div>
         </div>
+
         <div class="karakter__table">
           <div class="table">
             <div class="table__row">
@@ -59,6 +60,10 @@
           </div>
         </div>
       </div>
+      <div class="knowledgeBook__revealer">
+        <div id="karakter__icon_wrapper"></div>
+        <div class="karakter_text_wrapper"></div>
+      </div>
     </div>
 
     <div class="menu">
@@ -70,7 +75,7 @@
             </a>
           </li>
           <li>
-            <a>
+            <a onclick="showKnowledgeBook()">
               <i class="fas fa-user-graduate"></i>
             </a>
           </li>
@@ -92,6 +97,7 @@
         </ul>
       </nav>
     </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
 
